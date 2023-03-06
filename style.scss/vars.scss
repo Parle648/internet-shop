@@ -1,0 +1,20 @@
+$brackpoints: (
+    sm: 440px,
+    md: 740px,
+    lg: 1090px,
+    lg-m: 1024,
+    xl: 1300px,
+    xxl: 1600px,
+);
+
+
+@mixin simpleText {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@mixin hover {
+    &:hover{
+        cursor: pointer;
+    }
+}
