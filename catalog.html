@@ -91,60 +91,101 @@
     </nav>
 
     <div class="wrapper">
-        <div class="description">
-            <nav class="decription-nav">
-                <ul class="description__list">
-                    <li class="description__item">
-                        <img src="img/icons for menu2.svg" alt="" class="description__svg">
-                        <span class="description__product-ttl">Сигвеи и мини-сигвеи</span>
-                    </li>
-                    <li class="description__item">
-                        <img src="img/icons for menu1.svg" alt="" class="description__svg">
-                        <span class="description__product-ttl">Сигвеи и мини-сигвеи</span>
-                    </li>
-                    <li class="description__item">
-                        <img src="img/icons for menu2.svg" alt="" class="description__svg">
-                        <span class="description__product-ttl">Сигвеи и мини-сигвеи</span>
-                    </li>
-                    <li class="description__item">
-                        <img src="img/icons for menu2.svg" alt="" class="description__svg">
-                        <span class="description__product-ttl">Сигвеи и мини-сигвеи</span>
-                    </li>
-                    <li class="description__item">
-                        <img src="img/icons for menu2.svg" alt="" class="description__svg">
-                        <span class="description__product-ttl">Сигвеи и мини-сигвеи</span>
-                    </li>
-                    <li class="description__item">
-                        <img src="img/icons for menu2.svg" alt="" class="description__svg">
-                        <span class="description__product-ttl">Сигвеи и мини-сигвеи</span>
-                    </li>
-                    <li class="description__item">
-                        <img src="img/icons for menu2.svg" alt="" class="description__svg">
-                        <span class="description__product-ttl">Сигвеи и мини-сигвеи</span>
-                    </li>
-                    <li class="description__item">
-                        <img src="img/icons for menu2.svg" alt="" class="description__svg">
-                        <span class="description__product-ttl">Сигвеи и мини-сигвеи</span>
-                    </li>
-                    <li class="description__item">
-                        <img src="img/icons for menu2.svg" alt="" class="description__svg">
-                        <span class="description__product-ttl">Сигвеи и мини-сигвеи</span>
-                    </li>
-                    <li class="description__item">
-                        <img src="img/icons for menu2.svg" alt="" class="description__svg">
-                        <span class="description__product-ttl">Сигвеи и мини-сигвеи</span>
-                    </li>
-                </ul>
-            </nav>
-            <div class="description-slider">
-                <div class="description__slider-item">
-                    <img src="img/slider.png" alt="" class="description__slider-img">
-                </div>
+        <div class="filter-select">
+            <div class="filter__header">
+                <span class="filter__header-ttl" id="biggest">Сначала дорогие</span><img src="img/arrow-right.svg" alt="" class="select__arrow">
+            </div>
+            <div class="filter__body">
+                <span class="filter__body-ttl" id="lower">Сначала дешевые</span>
             </div>
         </div>
-
-        <main>
-            <h2 class="most-popular">Хиты продаж <a href="" class="most-popular__link">Все товары<img src="img/arrow-right.svg" alt="" class="most-popular__arrow"></a></h2>
+        <divclass= class='filters-wrapper'>
+            <div class="sort-block">
+                <div class="cost-select">
+                    <div class="cost-select__header">
+                        <span class="select__ttl">Цена, ₽</span>
+                        <img src="img/arrow-right.svg" alt="" class="select__arrow">
+                    </div>
+                    <div class="cost-select__body">
+                        <div class="select__inputs">
+                            <label for="" class="select__label"><span>от</span><input type="text" class="select__input" placeholder="3600"></label>
+                            <label for="" class="select__label"><span>до</span><input type="text" class="select__input" placeholder="17000"></label>
+                        </div>
+                        <div class="cost-slider">
+                            <div class="cost-slider__target"></div>
+                            <div class="cost__choise"></div>
+                            <div class="cost-slider__target"></div>
+                        </div>
+                        <button class="apply">Применить</button>
+                    </div>
+                </div>
+                <div class="cost-select">
+                    <div class="cost-select__header">
+                        <span class="select__ttl">Подсветка</span>
+                        <img src="img/arrow-right.svg" alt="" class="select__arrow">
+                    </div>
+                    <div class="cost-select__body">
+                        <div class="light__inputs">
+                            <label class="light__label">
+                                <input type="checkbox" name="light" class="light__input"><div class="fake-checkbox"><img src="img/check-mark.svg" alt=""></div><span class="var">Есть</span>
+                            </label>
+                            <label class="light__label">
+                                <input type="checkbox" name="light" class="light__input"><div class="fake-checkbox"><img src="img/check-mark.svg" alt=""></div><span class="var">Есть</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="cost-select">
+                    <div class="cost-select__header">
+                        <span class="select__ttl">Мощность двигателя (Ватт)</span>
+                        <img src="img/arrow-right.svg" alt="" class="select__arrow">
+                    </div>
+                    <div class="cost-select__body">
+                        <div class="light__inputs">
+                            <label class="light__label">
+                                <input type="checkbox" name="light" class="light__input"><div class="fake-checkbox"><img src="img/check-mark.svg" alt=""></div><span class="var">2100</span>
+                            </label>
+                            <label class="light__label">
+                                <input type="checkbox" name="light" class="light__input"><div class="fake-checkbox"><img src="img/check-mark.svg" alt=""></div><span class="var">500</span>
+                            </label>
+                            <label class="light__label">
+                                <input type="checkbox" name="light" class="light__input"><div class="fake-checkbox"><img src="img/check-mark.svg" alt=""></div><span class="var">350</span>
+                            </label>
+                            <label class="light__label">
+                                <input type="checkbox" name="light" class="light__input"><div class="fake-checkbox"><img src="img/check-mark.svg" alt=""></div><span class="var">300</span>
+                            </label>
+                            <label class="light__label">
+                                <input type="checkbox" name="light" class="light__input"><div class="fake-checkbox"><img src="img/check-mark.svg" alt=""></div><span class="var">250</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="cost-select">
+                    <div class="cost-select__header">
+                        <span class="select__ttl">Максимальная скорость (км/ч)</span>
+                        <img src="img/arrow-right.svg" alt="" class="select__arrow">
+                    </div>
+                    <div class="cost-select__body">
+                        <div class="light__inputs">
+                            <label class="light__label">
+                                <input type="checkbox" name="light" class="light__input"><div class="fake-checkbox"><img src="img/check-mark.svg" alt=""></div><span class="var">45</span>
+                            </label>
+                            <label class="light__label">
+                                <input type="checkbox" name="light" class="light__input"><div class="fake-checkbox"><img src="img/check-mark.svg" alt=""></div><span class="var">32</span>
+                            </label>
+                            <label class="light__label">
+                                <input type="checkbox" name="light" class="light__input"><div class="fake-checkbox"><img src="img/check-mark.svg" alt=""></div><span class="var">30</span>
+                            </label>
+                            <label class="light__label">
+                                <input type="checkbox" name="light" class="light__input"><div class="fake-checkbox"><img src="img/check-mark.svg" alt=""></div><span class="var">28</span>
+                            </label>
+                            <label class="light__label">
+                                <input type="checkbox" name="light" class="light__input"><div class="fake-checkbox"><img src="img/check-mark.svg" alt=""></div><span class="var">25</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="product-wrapper">
                 <div class="product-cart">
                     <img src="img/prod-img.jpg" alt="" class="prod__img">
@@ -154,7 +195,7 @@
                     <h2 class="prod__cost-trought-line">5400 ₽</h2>
                     <span class="prod__cost-block">
                         <div class="">
-                            <h2 class="prod__real-cost">4990 ₽</h2>
+                            <h2 class="prod__real-cost">10990 ₽</h2>
                             <span class="prod__coupon"><span class="prod__percent">20%</span>  — 1 000 ₽</span>
                         </div>
                         <div class="">
@@ -175,7 +216,7 @@
                     <h2 class="prod__cost-trought-line">5400 ₽</h2>
                     <span class="prod__cost-block">
                         <div class="">
-                            <h2 class="prod__real-cost">4990 ₽</h2>
+                            <h2 class="prod__real-cost">4590 ₽</h2>
                             <span class="prod__coupon"><span class="prod__percent">20%</span>  — 1 000 ₽</span>
                         </div>
                         <div class="">
@@ -196,7 +237,7 @@
                     <h2 class="prod__cost-trought-line">5400 ₽</h2>
                     <span class="prod__cost-block">
                         <div class="">
-                            <h2 class="prod__real-cost">4990 ₽</h2>
+                            <h2 class="prod__real-cost">499 ₽</h2>
                             <span class="prod__coupon"><span class="prod__percent">20%</span>  — 1 000 ₽</span>
                         </div>
                         <div class="">
@@ -217,7 +258,49 @@
                     <h2 class="prod__cost-trought-line">5400 ₽</h2>
                     <span class="prod__cost-block">
                         <div class="">
-                            <h2 class="prod__real-cost">4990 ₽</h2>
+                            <h2 class="prod__real-cost">49190 ₽</h2>
+                            <span class="prod__coupon"><span class="prod__percent">20%</span>  — 1 000 ₽</span>
+                        </div>
+                        <div class="">
+                            <img src="img/Vector-2.svg" alt="" class="prod__user-api">
+                            <img src="img/Vector-1.svg" alt="" class="prod__user-api">
+                        </div>
+                    </span>
+                    <span class="prod__btns-block">
+                        <button class="prod__order">Купить в 1 клик</button>
+                        <img src="img/shop-cart.svg" alt="" class="prod__add-in">
+                    </span>
+                </div>
+                <div class="product-cart">
+                    <img src="img/prod-img.jpg" alt="" class="prod__img">
+                    <h2 class="prod__class">Сигвеи</h2>
+                    <h2 class="prod__name">Гироскутер Smart Balance Well 6.5 Хип-Хоп (АКВАЗАЩИТА)</h2>
+                    <img src="img/rating.svg" alt="" class="prod__rating">
+                    <h2 class="prod__cost-trought-line">5400 ₽</h2>
+                    <span class="prod__cost-block">
+                        <div class="">
+                            <h2 class="prod__real-cost">49390 ₽</h2>
+                            <span class="prod__coupon"><span class="prod__percent">20%</span>  — 1 000 ₽</span>
+                        </div>
+                        <div class="">
+                            <img src="img/Vector-2.svg" alt="" class="prod__user-api">
+                            <img src="img/Vector-1.svg" alt="" class="prod__user-api">
+                        </div>
+                    </span>
+                    <span class="prod__btns-block">
+                        <button class="prod__order">Купить в 1 клик</button>
+                        <img src="img/shop-cart.svg" alt="" class="prod__add-in">
+                    </span>
+                </div>
+                <div class="product-cart">
+                    <img src="img/prod-img.jpg" alt="" class="prod__img">
+                    <h2 class="prod__class">Сигвеи</h2>
+                    <h2 class="prod__name">Гироскутер Smart Balance Well 6.5 Хип-Хоп (АКВАЗАЩИТА)</h2>
+                    <img src="img/rating.svg" alt="" class="prod__rating">
+                    <h2 class="prod__cost-trought-line">5400 ₽</h2>
+                    <span class="prod__cost-block">
+                        <div class="">
+                            <h2 class="prod__real-cost">490 ₽</h2>
                             <span class="prod__coupon"><span class="prod__percent">20%</span>  — 1 000 ₽</span>
                         </div>
                         <div class="">
@@ -231,7 +314,7 @@
                     </span>
                 </div>
             </div>
-        </main>
+        </divclass='filters'>
     </div>
 
     <footer>
@@ -312,7 +395,6 @@
             </ul>
         </div>
     </footer>
-
     <script src="index.js"></script>
 </body>
 </html>
