@@ -1,0 +1,53 @@
+{
+  "users": [
+    {
+      "name": "Vitalia",
+      "mail": "vitalia@gmail.com",
+      "number": "1324567890",
+      "pass": "12qwerty654",
+      "id": 1
+    },
+    {
+      "name": "AbObA",
+      "mail": "sad@gmial.com",
+      "number": "12321321",
+      "pass": "",
+      "id": 2
+    },
+    {
+      "name": "AbObA",
+      "mail": "1",
+      "number": "1",
+      "pass": "1",
+      "id": 3
+    },
+    {
+      "name": "1",
+      "mail": "1",
+      "number": "1",
+      "pass": "1",
+      "id": 4
+    },
+    {
+      "name": "2",
+      "mail": "2",
+      "number": "2",
+      "pass": "2",
+      "id": 5
+    },
+    {
+      "name": "3",
+      "mail": "3",
+      "number": "3",
+      "pass": "3",
+      "id": 6
+    },
+    {
+      "name": "Vitalia",
+      "mail": "vitalia@gmail.com",
+      "number": "12312",
+      "pass": "12312321",
+      "id": 7
+    }
+  ]
+}

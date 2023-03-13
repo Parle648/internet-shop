@@ -1,0 +1,143 @@
+.most-popular {
+    color: #070C11;
+    font-size: 36px;
+    font-weight: 700;
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 40px;
+    &__link {
+        color: #2A5275;
+        @include simpleText;
+        text-decoration: none;
+        margin-left: 30px;
+        margin-right: 5px;
+        display: flex;
+        align-items: flex-end;
+    }
+    &__arrow{
+        margin-left: 5px;
+    }
+}
+
+.product-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    @include xl-d{
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow-x: scroll;
+    }
+}
+
+.product-cart {
+    width: 286px;
+    padding: 20px;
+}
+.prod {
+
+    &__img {
+        margin-bottom: 10px;
+    }
+
+    &__class {
+        @include simpleText;
+        color: #838688;
+        margin-bottom: 10px;
+    }
+
+    &__name {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 26px;
+        color: #070C11;
+        width: 286px;
+        margin-bottom: 23px;
+    }
+
+    &__rating {
+        margin-bottom: 14px;
+    }
+
+    &__cost-trought-line {
+        text-decoration: line-through;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 21px;
+        color: #838688;
+    }
+
+    &__real-cost {
+        color: #070C11;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 31px;
+        margin-bottom: 6px;
+    }
+
+    &__cost-block,
+    &__btns-block{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 18px;
+    }
+
+    &__coupon {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 18px;
+        background-color: #F37748;
+        border-radius: 14px;
+        padding: 3px 8px 3px 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 105px;
+    }
+
+    &__percent {
+        color: #070C11;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        background-color: #fff;
+        border-radius: 23px;
+        padding: 0px 4px;
+    }
+
+    &__order {
+        color: #4878A6;
+        border: 1px solid #4878A6;
+        border-radius: 4px;
+        background-color: #ffffff;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 21px;
+        padding: 13px 51px;
+        line-height: 21px;
+        @include hover;
+    }
+
+    &__user-api,
+    &__add-in{
+        padding: 15px 14px;
+        border: 1px solid #C8CACB;
+        border-radius: 4px;
+        @include hover;
+        margin-bottom: -3px;
+    }
+    &__user-api:last-child{
+        padding: 14px 15px 14px 16px;
+    }
+    &__btns-block{
+        align-items: flex-start;
+    }
+    &__add-in{
+        background-color: #4878A6;
+        border: 0px;
+        padding: 14px;
+    }
+}

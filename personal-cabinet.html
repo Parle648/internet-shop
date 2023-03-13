@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700&display=swap');
+    </style>
+    <title>Smart техника</title>
+</head>
+<body>
+    <ul class="mobile-nav">
+        <li class="mobile-nav__item">
+            <a href="" class="mobile-nav__link">
+                <img src="img/home.svg" alt="@!" class="mobile-nav__icon">
+                Главная
+            </a>
+        </li>
+        <li class="mobile-nav__item">
+            <a href="" class="mobile-nav__link">
+                <img src="img/menu-icon.svg" alt="@!" class="mobile-nav__icon">
+                Корзина
+            </a>
+        </li>
+        <li class="mobile-nav__item">
+            <a href="" class="mobile-nav__link">
+                <img src="img/shop-cart.svg" alt="@!" class="mobile-nav__icon">
+                Каталог
+            </a>
+        </li>
+        <li class="mobile-nav__item">
+            <a href="" class="mobile-nav__link">
+                <img src="img/white-search-icon.svg" alt="@!" class="mobile-nav__icon">
+                Поиск
+            </a>
+        </li>
+        <li class="mobile-nav__item">
+            <a href="" class="mobile-nav__link">
+                <img src="img/more.svg" alt="@!" class="mobile-nav__icon">
+                Ещё
+            </a>
+        </li>
+    </ul>
+    <header>
+        <img src="img/logo.svg" alt="" class="header__logo">
+        <div class="header__contacts">
+            <h2 class="header__number">+7 (812) 660-50-54</h2>
+            <h2 class="header__number">+7 (958) 111-95-03</h2>
+            <h2 class="header__shedule">Пн-вс: с 10:00 до 21:00</h2>
+        </div>
+        <div class="header__search">
+            <img src="img/search-icon.svg" alt="" class="search__img"><input type="text" class="search__input" placeholder="Поиск">
+        </div>
+        <div class="header__user-api">
+            <img src="img/Vector-3.svg" alt="" class="header__user-img">
+            <img src="img/Vector-2.svg" alt="" class="header__user-img">
+            <img src="img/Vector-1.svg" alt="" class="header__user-img">
+            <img src="img/Vector.svg" alt="" class="header__user-img">
+        </div>
+        <button class="header__enter">Войти</button>
+    </header>
+    <nav class="main-nav">
+        <div class="wrapper">
+            <div class="catalog">
+                <img src="img/menu-icon.svg" alt="" class="catalog__img">
+                <a href="catalog.html" class="catalog__text">Каталог товаров</a>
+            </div>
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#!" class="nav__link">О компании</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#!" class="nav__link">Акции</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#!" class="nav__link">Рассрочка 0|0|18</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#!" class="nav__link">Сервис и гарантия</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#!" class="nav__link">Опт/дропшиппинг</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#!" class="nav__link">Контакты</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <div class='filters-wrapper'>
+            <div class="sort-block">
+                <h2 class="cabinet-inner-ttl">Общие сведения</h2>
+                <ul class="cabinet__list">
+                    <li class="cabinet__item">
+                        <a href="" class="cabinet__link">Общие сведения</a>
+                    </li>
+                    <li class="cabinet__item">
+                        <a href="" class="cabinet__link">Личные данные</a>
+                    </li>
+                    <li class="cabinet__item">
+                        <a href="" class="cabinet__link">История покупок</a>
+                    </li>
+                    <li class="cabinet__item">
+                        <a href="" class="cabinet__link">Избранное</a>
+                    </li>
+                    <li class="cabinet__item">
+                        <a href="" class="cabinet__link">Сменить пароль</a>
+                    </li>
+                    <li class="cabinet__item">
+                        <a href="" class="cabinet__link">Выйти</a>
+                    </li>
+                </ul>                
+            </div>
+            <div class="product-wrapper">
+                <div class="user-data display">
+                    <h2 class="user__name">Андрей</h2>
+                    <div class="stats-block">
+                        <img src="img/user-photo.jpg" alt="" class="">
+                        <div class="user__data-block">
+                            <h2 class="user__registration">Дата регистрации: <span class="registration-date"></span></h2>
+                            <h2 class="user__orders">Заказов: <span class="order-count"></span></h2>
+                        </div>
+                    </div>
+                    <p class="user__paragraph">
+                        Добро пожаловать в панель управления. Здесь вы можете изменить свои регистрационные данные и cменить пароль. Зарегистрированные пользователи имеют доступ к истории заказов и возможность добавлять в избранное товары для будущих покупок.
+                    </p>
+                    <button class="user__btn">Панель управления</button>
+                </div>
+
+                <div class="user-data-form display">
+                    <ul class="user__input-lists">
+                        <li class="user-inputs__item">
+                            <h2 class="user__input-ttl">Имя</h2>
+                            <input type="text" placeholder="Some Text" class="user__input">
+                        </li>
+                        <li class="user-inputs__item">
+                            <h2 class="user__input-ttl">Эл. почта</h2>
+                            <input type="text" placeholder="Some Text" class="user__input">
+                        </li>
+                        <li class="user-inputs__item">
+                            <h2 class="user__input-ttl">Телефон</h2>
+                            <input type="text" placeholder="Some Text" class="user__input">
+                        </li>
+                        <li class="user-inputs__item">
+                            <h2 class="user__input-ttl">Город</h2>
+                            <input type="text" placeholder="Some Text" class="user__input">
+                        </li>
+                        <li class="user-inputs__item">
+                            <h2 class="user__input-ttl">Индекс</h2>
+                            <input type="text" placeholder="Some Text" class="user__input">
+                        </li>
+                    </ul>
+                    <ul class="user__input-lists">
+                        <li class="user-inputs__item">
+                            <h2 class="user__input-ttl">Имя</h2>
+                            <input type="text" placeholder="Some Text" class="user__input">
+                        </li>
+                        <li class="user-inputs__item">
+                            <h2 class="user__input-ttl">Эл. почта</h2>
+                            <input type="text" placeholder="Some Text" class="user__input">
+                        </li>
+                        <li class="user-inputs__item">
+                            <h2 class="user__input-ttl">Телефон</h2>
+                            <input type="text" placeholder="Some Text" class="user__input">
+                        </li>
+                        <li class="user-inputs__item">
+                            <h2 class="user__input-ttl">Город</h2>
+                            <input type="file" placeholder="Some Text" class="user__input">
+                        </li>
+                        <li class="user-inputs__item">
+                            <button class="user__btn">Сохранить</button>
+                        </li>
+                    </ul>
+                </div>
+                
+                <form class="change-passwd-form display">
+                    <h2 class="user__input-ttl">Введите старый пароль</h2>
+                    <label class="change-passwd__label">
+                        <img src="img/security.svg" alt="" class="security">
+                        <input type="password" name="old-passwd" id="" class="change-passwd__input">
+                        <img src="img/eye.svg" alt="" class="security">
+                    </label>
+                    <h2 class="user__input-ttl">Введите новый пароль</h2>
+                    <label class="change-passwd__label">
+                        <img src="img/security.svg" alt="" class="security">
+                        <input type="password" name="" id="" class="change-passwd__input">
+                        <img src="img/eye.svg" alt="" class="security">
+                    </label>
+                    <h2 class="user__input-ttl">Повторите новый пароль</h2>
+                    <label class="change-passwd__label">
+                        <img src="img/security.svg" alt="" class="security">
+                        <input type="password" name="" id="" class="change-passwd__input">
+                        <img src="img/eye.svg" alt="" class="security">
+                    </label>
+                    <button class="user__btn" type="submit">Сохранить изменения</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="wrapper">
+            <div class="">
+                <img src="img/logo.svg" alt="" class="footer__logo">
+                <div class="footer__contacts">
+                    <h2 class="header__number footer__number">+7 (812) 660-50-54</h2>
+                    <h2 class="header__number footer__number">+7 (958) 111-95-03</h2>
+                    <h2 class="header__shedule footer__shedule">Пн-вс: с 10:00 до 21:00</h2>
+                </div>
+                <div class="footer__location">
+                    Проспект Стачек 67 к.5
+                </div class="footer__location">
+                <div class="footer__location">
+                    Лиговский проспект 205
+                </div class="footer__location">
+                <div class="footer__location">
+                    Гражданский проспект, 116 к.5
+                </div class="footer__location">
+            </div>
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a href="#!" class="footer__list-ttl">Для клиента</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#!" class="footer__link">Как купить</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#!" class="footer__link">Доставка и оплата</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#!" class="footer__link">Кредит</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#!" class="footer__link">Политика конфиденциальности</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#!" class="footer__link">Вопросы и ответы (F.A.Q.)</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#!" class="footer__link">Сервис и гарантия</a>
+                </li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a href="#!" class="footer__list-ttl">Для клиента</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#!" class="footer__link">Как купить</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#!" class="footer__link">Доставка и оплата</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#!" class="footer__link">Кредит</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#!" class="footer__link">Политика конфиденциальности</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#!" class="footer__link">Вопросы и ответы (F.A.Q.)</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#!" class="footer__link">Сервис и гарантия</a>
+                </li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a href="#!" class="footer__list-ttl">Для клиента</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#!" class="footer__link">Как купить</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#!" class="footer__link">Доставка и оплата</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

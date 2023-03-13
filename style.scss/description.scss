@@ -1,0 +1,41 @@
+.description {
+    display: flex;
+    justify-content: space-between;
+    &__list {
+        list-style-type: none;
+        width: 310px;
+        padding: 0;
+        margin: 0;
+        @include xl-d{
+            display: none;
+            margin: 0 auto;
+        }
+    }
+
+    &__item {
+        width: 211px;
+        padding: 13.5px 81px 13.5px 18.5px;
+        background-color: #EDF2F6;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+    &__item:last-child{
+        border-radius: 0px 0px 8px 8px;
+    }
+
+    &__svg {
+        margin-right: 10.5px;
+    }
+
+    &__product-ttl {
+        @include simpleText;
+        width: 169px;
+    }
+    &__slider-img {
+        margin-top: 20px;
+        @include xl-d{
+            width: 95%;
+        }
+    }
+}
