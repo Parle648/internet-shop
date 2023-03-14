@@ -128,6 +128,7 @@
         border-radius: 4px;
         @include hover;
         margin-bottom: -3px;
+        transition: .3s;
     }
     &__user-api:last-child{
         padding: 14px 15px 14px 16px;

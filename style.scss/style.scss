@@ -228,8 +228,18 @@ body{
     &__delete {
         @include hover;
     }
+    &__img{
+        width: 80px;
+        height: 80px;
+        margin-left: 30px;
+    }
 }
 .minus,
 .plus {
     @include hover;
+}
+
+.busket_active{
+    background-color: #EDF2F6;
+    padding: 2px;
 }

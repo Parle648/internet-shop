@@ -93,3 +93,46 @@ enterForm.addEventListener('submit', function(event){
 
     getUsersData();
 })
+
+//add to corzina
+
+const prodBtn = document.querySelector('#prod-btn');
+const cartsBuyBtns = document.querySelectorAll('.prod__add-in');
+
+if(localStorage.pressedKeys != undefined){
+    localStorage.pressedKeys.split(',').splice(1).forEach((item) => {
+        const id = '#' + item;
+        const btn = document.querySelector(id).querySelector('.prod__add-in');
+        btn.removeEventListener('click', addToProd)
+    
+        document.querySelector(id).querySelector('.prod__add-in').classList.add('busket_active')
+        document.querySelector(id).querySelector('.prod__add-in').setAttribute('src', 'img/buy-done.svg')
+    })
+}
+
+function addToProd(event){
+    event.currentTarget.classList.add('busket_active')
+    event.currentTarget.setAttribute('src', 'img/buy-done.svg')
+
+    const parentBlock = event.currentTarget.parentNode.parentNode;
+
+    const prodData = {
+        img: parentBlock.firstElementChild.getAttribute('src'),
+        cost: parentBlock.querySelector('.prod__real-cost').innerText.split(' ')[0],
+        ttl: parentBlock.querySelector('.prod__name').innerText,
+        id: parentBlock.getAttribute('id'),
+    }
+
+    localStorage.setItem('pressedKeys', localStorage.pressedKeys + ',' + prodData.id)
+
+    if(localStorage.product != undefined && localStorage.product != ''){
+        localStorage.setItem("product", localStorage.product + ";" + JSON.stringify(prodData))
+    } else if (localStorage.product === '' || localStorage.product === undefined) {
+        localStorage.setItem("product", JSON.stringify(prodData))
+    }
+    event.currentTarget.removeEventListener('click', addToProd)
+};
+
+cartsBuyBtns.forEach(function (btn) {
+    btn.addEventListener('click', addToProd);
+})
