@@ -1,17 +1,4 @@
-
-
-
-
-const url = 'https://jsonplaceholder.typicode.com/users'
-
-async function getResponce(){
-    let responce = await fetch(url)
-    let responceArray = await responce.text()
-    // console.log(JSON.parse(responceArray))
-}
-
-getResponce()
-
+// registration / enter
 const form = document.querySelector('.form-wrapper');
 const enterBtn = document.querySelector('.header__enter');
 const closeFormBtn = document.querySelectorAll('.form__close-img');
@@ -33,9 +20,6 @@ function openRegistrForm(event){
     document.querySelector('#enter-form').classList.toggle('display')
     document.querySelector('#registr-form').classList.toggle('display')
 };
-
-
-
 
 const makeRegistr = document.querySelector('#make-registr');
 const registrForm = document.querySelector('#enter-form');
@@ -135,4 +119,46 @@ function addToProd(event){
 
 cartsBuyBtns.forEach(function (btn) {
     btn.addEventListener('click', addToProd);
+})
+
+// prefer logic
+
+const preferBtn = document.querySelectorAll('.prefer-btn');
+
+if(localStorage.pressedPrefer != undefined){
+    localStorage.pressedPrefer.split(',').splice(1).forEach((item) => {
+        if(item != ''){
+            const id = '#' + item;
+            const btn = document.querySelector(id).querySelector('.prefer-btn');
+            btn.removeEventListener('click', addToProd)
+        
+            document.querySelector(id).querySelector('.prefer-btn').setAttribute('src', 'img/hard-active.svg')
+        }
+    })
+}
+
+function addToPrefer(event){
+    event.currentTarget.setAttribute('src', 'img/hard-active.svg')
+
+    const chooseProduct = event.currentTarget.closest('.product-cart');
+
+    const chooseProductData = {
+        id: event.currentTarget.closest('.product-cart').id,
+        img: chooseProduct.firstElementChild.getAttribute('src'),
+        cost: chooseProduct.querySelector('.prod__real-cost').innerText.split(' ')[0],
+        ttl: chooseProduct.querySelector('.prod__name').innerText,
+    }
+
+    localStorage.setItem('pressedPrefer', localStorage.pressedPrefer + ',' + chooseProductData.id)
+
+    if(localStorage.preferData != undefined && localStorage.preferData != ''){
+        localStorage.setItem("preferData", localStorage.preferData + ";" + JSON.stringify(chooseProductData))
+    } else if (localStorage.preferData === '' || localStorage.preferData === undefined) {
+        localStorage.setItem("preferData", JSON.stringify(chooseProductData))
+    }
+    event.currentTarget.removeEventListener('click', addToProd)
+}
+
+preferBtn.forEach((btn) => {
+    btn.addEventListener('click', addToPrefer)
 })

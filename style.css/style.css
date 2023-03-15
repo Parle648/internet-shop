@@ -431,8 +431,6 @@ header {
   border: 1px solid #C8CACB;
   border-radius: 4px;
   margin-bottom: -3px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 .prod__user-api:hover, .prod__add-in:hover {
   cursor: pointer;
