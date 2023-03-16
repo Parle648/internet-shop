@@ -243,3 +243,66 @@ body{
     background-color: #EDF2F6;
     padding: 2px;
 }
+
+//@at-root
+
+.coparhison-header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 78px;
+}
+.comparsion-settings {
+}
+.drop-down {
+    &__header,
+    &__body {
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 13.5px 20px;
+        @include hover;
+        border: 1px solid #E5E5E5;
+        border-radius: 5px;
+    }
+
+    &__ttl,
+    &__choise {
+        color: #070C11;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 21px;
+    }
+
+    &__body {
+        opacity: 0;
+        height: 0;
+    }
+}
+.arrow-down {
+}
+.comparsion-body{
+    margin-bottom: 30px;
+    margin-top: -50px;
+}
+.comparsion-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25.5px 0px 25.5px 20px;
+}
+.row {
+    &__ttl {
+        width: 300px;
+    }
+    &__specification {
+        width: 300px;
+    }
+}
+
+.blue{
+    background-color: #EDF2F6;
+}
+.orange{
+    background-color: #FFF7E3;
+}

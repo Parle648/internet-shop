@@ -162,3 +162,26 @@ function addToPrefer(event){
 preferBtn.forEach((btn) => {
     btn.addEventListener('click', addToPrefer)
 })
+
+// comparsion
+
+const comprsBtn = document.querySelectorAll('.comparsion-btn');
+
+function addToComparsion(event){
+    const parent = event.currentTarget.closest('.product-cart');
+
+    const chooseProductData = {
+        id: parent.id,
+        img: parent.firstElementChild.getAttribute('src'),
+        cost: parent.querySelector('.prod__real-cost').innerText.split(' ')[0],
+        ttl: parent.querySelector('.prod__name').innerText,
+    }
+
+    localStorage.setItem("pressedComparsion", localStorage.pressedComparsion + ';' + parent.id)
+    localStorage.setItem("comparsionData", localStorage.comparsionData + ';' + JSON.stringify(chooseProductData))
+    event.currentTarget.removeEventListener('click', addToComparsion)
+}
+
+comprsBtn.forEach((btn) => {
+    btn.addEventListener('click', addToComparsion)
+})
