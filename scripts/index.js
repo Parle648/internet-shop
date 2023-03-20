@@ -25,35 +25,68 @@ const makeRegistr = document.querySelector('#make-registr');
 const registrForm = document.querySelector('#enter-form');
 let localUrl = 'http://localhost:8000/users';
 
+// validation
+
+const formInputs = document.getElementById('enter-form').querySelectorAll('.registr__input');
+
+function checkInput(input) {
+    if (input.dataset.regexp) {
+        const regexp = new RegExp(input.dataset.regexp);
+
+        input.oninput = () => {
+            if (regexp.test(input.value)) {
+                input.classList.add('input_valid')
+            } else {
+                input.classList.remove('input_valid')
+            }
+        }
+    }
+}
+
+formInputs.forEach(checkInput)
+
+//
+
 registrForm.addEventListener('submit', function(event){
     event.preventDefault();
+    let key = false;
+    formInputs.forEach(function (input) {
+        if (!input.closest('.input_valid')) {
+            key = false
+        } else {
+            key = true
+        };
 
-    let formData = {
-        name: registrForm.name.value,
-        mail: registrForm.mail.value,
-        number: registrForm.number.value,
-        pass: registrForm.pass.value,
-    }
+        if (key) {
+            let formData = {
+                name: registrForm.name.value,
+                mail: registrForm.mail.value,
+                number: registrForm.number.value,
+                pass: registrForm.pass.value,
+            }
+        
+            async function makeRequest(method, url, data){
+                await fetch(localUrl, {
+                    method: 'POST',
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(formData),
+                })
+                .then(response => {
+                })
+                .catch(error => {
+                })
+                .then(response => {
+                    window.location.href = 'personal-cabinet.html';
+                });
+        
+            }
+            
+            makeRequest();
+        }
+    })
 
-    async function makeRequest(method, url, data){
-        await fetch(localUrl, {
-            method: 'POST',
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(formData),
-        })
-        .then(response => {
-        })
-        .catch(error => {
-        })
-        .then(response => {
-            window.location.href = 'personal-cabinet.html';
-        });
-
-    }
-    
-    makeRequest();
 })
 
 const enterForm = document.getElementById('registr-form')
@@ -167,6 +200,7 @@ preferBtn.forEach((btn) => {
 
 const comprsBtn = document.querySelectorAll('.comparsion-btn');
 
+
 function addToComparsion(event){
     const parent = event.currentTarget.closest('.product-cart');
 
@@ -180,8 +214,22 @@ function addToComparsion(event){
     localStorage.setItem("pressedComparsion", localStorage.pressedComparsion + ';' + parent.id)
     localStorage.setItem("comparsionData", localStorage.comparsionData + ';' + JSON.stringify(chooseProductData))
     event.currentTarget.removeEventListener('click', addToComparsion)
+    event.currentTarget.setAttribute('click', addToComparsion)
+    event.currentTarget.setAttribute('src', 'img/comparsion-active.svg')
 }
 
 comprsBtn.forEach((btn) => {
     btn.addEventListener('click', addToComparsion)
 })
+
+if(localStorage.pressedComparsion != undefined){
+    localStorage.pressedComparsion.split(';').splice(1).forEach((item) => {
+        if(item != ''){
+            const id = '#' + item;
+            const btn = document.querySelector(id).querySelector('.comparsion-btn');
+            btn.removeEventListener('click', addToComparsion)
+        
+            document.querySelector(id).querySelector('.comparsion-btn').setAttribute('src', 'img/comparsion-active.svg')
+        }
+    })
+}

@@ -1286,3 +1286,7 @@ body {
 .orange {
   background-color: #FFF7E3;
 }
+
+.input_valid {
+  border-color: green;
+}

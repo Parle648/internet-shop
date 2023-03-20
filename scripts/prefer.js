@@ -3,6 +3,7 @@ const preferBlock = document.querySelector("#prefer-block");
 const preferProducts = localStorage.preferData.split(";");
 
 function addProduct(product){
+    console.log(product)
     if(product != ''){
         preferBlock.innerHTML += `
             <div class="product-cart" id="${JSON.parse(product).id}">
@@ -45,6 +46,25 @@ const preferBtns = document.querySelectorAll('.prefer-btn');
 //     })
 // }
 
+// const removeBtns = document.querySelectorAll('.comparsion-btn')
+
+// function removeProduct(event){
+//     const chooseProductData = {
+//         id: event.target.closest('.product-cart').id,
+//         img: event.target.closest('.product-cart').firstElementChild.getAttribute('src'),
+//         cost: event.target.closest('.product-cart').querySelector('.prod__real-cost').innerText.split(' ')[0],
+//         ttl: event.target.closest('.product-cart').querySelector('.prod__name').innerText,
+//     }
+    
+//     localStorage.setItem('pressedComparsion', localStorage.pressedComparsion.replace(`${event.target.closest('.product-cart').id}`, ''))
+//     localStorage.setItem('comparsionData', localStorage.comparsionData.replace(JSON.stringify(chooseProductData), ''))
+//     console.log(localStorage.comparsionData)
+// }
+
+// removeBtns.forEach(function(btn){
+//     btn.addEventListener('click', removeProduct)
+// })
+
 function removeCart(btn){
     btn.addEventListener('click', function(){
         const parentBlock = btn.closest('.product-cart');
@@ -65,3 +85,23 @@ function removeCart(btn){
 }
 
 preferBtns.forEach(removeCart)
+
+// let removeBtns = prodBlock.children
+// console.log(removeBtns)
+
+// function removeProduct(event){
+//     const chooseProductData = {
+//         id: event.target.closest('.product-cart').id,
+//         img: event.target.closest('.product-cart').firstElementChild.getAttribute('src'),
+//         cost: event.target.closest('.product-cart').querySelector('.prod__real-cost').innerText.split(' ')[0],
+//         ttl: event.target.closest('.product-cart').querySelector('.prod__name').innerText,
+//     }
+    
+//     localStorage.setItem('pressedComparsion', localStorage.pressedComparsion.replace(`${event.target.closest('.product-cart').id}`, ''))
+//     localStorage.setItem('comparsionData', localStorage.comparsionData.replace(JSON.stringify(chooseProductData), ''))
+//     console.log(localStorage.comparsionData)
+// }
+
+// for(let btn of removeBtns){
+//     btn.addEventListener('click', removeProduct)
+// }
