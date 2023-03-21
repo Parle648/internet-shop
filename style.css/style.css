@@ -21,7 +21,7 @@ header {
 .header__logo {
   margin-right: 152px;
 }
-@media (max-width: 779.8px) {
+@media (max-width: 799.8px) {
   .header__logo {
     margin: 0;
   }
@@ -132,8 +132,9 @@ header {
   padding: 15px 3%;
   position: fixed;
   bottom: 0;
+  z-index: 2;
 }
-@media (max-width: 779.8px) {
+@media (max-width: 799.8px) {
   .mobile-nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1124,6 +1125,27 @@ body {
   width: 310px;
 }
 
+.make-offer-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+@media (max-width: 1299.8px) {
+  .make-offer-wrapper {
+    width: 95%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .make-offer-ttl {
   margin-bottom: 50px;
 }
@@ -1132,6 +1154,12 @@ body {
   border: 1px solid #C8CACB;
   width: 860px;
   border-radius: 8px;
+  margin-bottom: 40px;
+}
+@media (max-width: 1089.8px) {
+  .buy-block {
+    width: 95%;
+  }
 }
 
 .buy__ttl {
@@ -1156,6 +1184,18 @@ body {
   border-bottom: 1px solid #C8CACB;
   margin-bottom: 30px;
 }
+@media (max-width: 1089.8px) {
+  .buy__product {
+    width: 95%;
+  }
+}
+@media (max-width: 579.8px) {
+  .buy__product {
+    width: 95%;
+    position: relative;
+    height: 140px;
+  }
+}
 .buy__product:last-child {
   border-bottom: 0px;
 }
@@ -1165,6 +1205,11 @@ body {
   font-weight: 400;
   line-height: 21px;
   width: 280px;
+}
+@media (max-width: 579.8px) {
+  .buy__inner-ttl {
+    width: 170px;
+  }
 }
 .buy__counter {
   display: -webkit-box;
@@ -1178,10 +1223,24 @@ body {
           justify-content: space-between;
   width: 100px;
 }
+@media (max-width: 579.8px) {
+  .buy__counter {
+    position: absolute;
+    top: 127px;
+    left: 189px;
+  }
+}
 .buy__count {
   padding: 13px 20px;
   border: 1px solid #C8CACB;
   border-radius: 5px;
+}
+@media (max-width: 579.8px) {
+  .buy__cost {
+    position: absolute;
+    top: 127px;
+    left: 32px;
+  }
 }
 .buy__trousght-cost {
   color: #838688;
@@ -1199,10 +1258,26 @@ body {
 .buy__delete:hover {
   cursor: pointer;
 }
+@media (max-width: 1089.8px) {
+  .buy__delete {
+    margin-left: 15px;
+  }
+}
+@media (max-width: 579.8px) {
+  .buy__delete {
+    margin-right: 35px;
+  }
+}
 .buy__img {
   width: 80px;
   height: 80px;
   margin-left: 30px;
+}
+@media (max-width: 579.8px) {
+  .buy__img {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .minus:hover,
@@ -1213,6 +1288,97 @@ body {
 .busket_active {
   background-color: #EDF2F6;
   padding: 2px;
+}
+
+.finish-amount {
+  background-color: #EDF2F6;
+  border-radius: 8px;
+  padding: 30px;
+  width: 420px;
+  margin-left: 20px;
+}
+@media (max-width: 799.8px) {
+  .finish-amount {
+    width: 95%;
+    margin-left: 0;
+    padding: 15px;
+  }
+}
+
+.finish__ttl {
+  color: #070C11;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 34px;
+  margin-bottom: 17px;
+}
+.finish__info-block {
+  width: 360px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+@media (max-width: 799.8px) {
+  .finish__info-block {
+    width: 95%;
+  }
+}
+.finish__info-ttl, .finish__info {
+  color: #838688;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.finish__info {
+  color: #070C11;
+}
+.finish__result-ttl {
+  color: #070C11;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  position: relative;
+  width: 95%;
+}
+.finish__result {
+  position: absolute;
+  right: -258px;
+}
+@media (max-width: 799.8px) {
+  .finish__result {
+    right: -121px;
+  }
+}
+
+.make {
+  display: block;
+  margin-top: 20px;
+  width: 360px;
+  height: 48px;
+  border: 0px;
+  border-radius: 4px;
+  background-color: #838688;
+  color: #fff;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+@media (max-width: 799.8px) {
+  .make {
+    width: 95%;
+  }
+}
+.make:hover {
+  cursor: pointer;
+}
+.make:hover {
+  background-color: rgba(131, 134, 136, 0.7215686275);
 }
 
 .coparhison-header {

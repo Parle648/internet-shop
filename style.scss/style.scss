@@ -138,6 +138,15 @@ body{
 
 //@at-root
 
+.make-offer-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    @include xl-d{
+        width: 95%;
+        flex-direction: column;
+    }
+}
 
 .make-offer-ttl {
     margin-bottom: 50px;
@@ -146,6 +155,10 @@ body{
     border: 1px solid #C8CACB;
     width: 860px;
     border-radius: 8px;
+    margin-bottom: 40px;
+    @include lg-d{
+        width: 95%;
+    }
 }
 .buy {
 
@@ -164,6 +177,14 @@ body{
         align-items: center;
         justify-content: space-between;
         width: 800px;
+        @include lg-d {
+            width: 95%;
+        }
+        @include sm-d {
+            width: 95%;
+            position: relative;
+            height: 140px;
+        };
         padding-bottom: 49px;
         border-bottom: 1px solid #C8CACB;
         margin-bottom: 30px;
@@ -180,6 +201,9 @@ body{
         font-weight: 400;
         line-height: 21px;
         width: 280px;
+        @include sm-d {
+            width: 170px;
+        };
     }
 
     // .buy__counter
@@ -189,6 +213,11 @@ body{
         align-items: center;
         justify-content: space-between;
         width: 100px;
+        @include sm-d {
+            position: absolute;
+            top: 127px;
+            left: 189px;
+        }
     }
 
     // .buy__count
@@ -202,6 +231,11 @@ body{
     // .buy__cost
 
     &__cost {
+        @include sm-d {
+            position: absolute;
+            top: 127px;
+            left: 32px;
+        }
     }
 
     // .buy__trousght-cost
@@ -227,11 +261,21 @@ body{
 
     &__delete {
         @include hover;
+        @include lg-d {
+            margin-left: 15px;
+        }
+        @include sm-d {
+            margin-right: 35px;
+        }
     }
     &__img{
         width: 80px;
         height: 80px;
         margin-left: 30px;
+        @include sm-d {
+            width: 40px;
+            height: 40px;
+        }
     }
 }
 .minus,
@@ -244,6 +288,100 @@ body{
     padding: 2px;
 }
 
+.finish-amount {
+    background-color: #EDF2F6;
+    border-radius: 8px;
+    padding: 30px;
+    width: 420px;
+    margin-left: 20px;
+    @include md-d{
+        width: 95%;
+        margin-left: 0;
+        padding: 15px;
+    }
+}
+.finish {
+
+    // .finish__ttl
+
+    &__ttl {
+        color: #070C11;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 34px;
+        margin-bottom: 17px;
+    }
+
+    // .finish__info-block
+
+    &__info-block {
+        width: 360px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        @include md-d{
+            width: 95%;
+        }
+    }
+
+    // .finish__info-ttl
+
+    &__info-ttl,
+    &__info {
+        color: #838688;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    // .finish__info
+
+    &__info {
+        color: #070C11;
+    }
+
+    // .finish__result-ttl
+
+    &__result-ttl {
+        color: #070C11;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29px;
+        position: relative;
+        width: 95%;
+    }
+    
+    // .finish__result
+    
+    &__result {
+        position: absolute;
+        right: -258px;
+        @include md-d{
+            right: -121px;
+        }
+    }
+}
+.make {
+    display: block;
+    margin-top: 20px;
+    width: 360px;
+    height: 48px;
+    border: 0px;
+    border-radius: 4px;
+    background-color: #838688;
+    color: #fff;
+    transition: .2s;
+    @include md-d{
+        width: 95%;
+    } 
+    @include hover;
+    &:hover{
+        background-color: #838688b8;
+    }
+}
+
+
 //@at-root
 
 .coparhison-header {
@@ -251,8 +389,8 @@ body{
     justify-content: space-between;
     margin-top: 78px;
 }
-.comparsion-settings {
-}
+// .comparsion-settings {
+// }
 .drop-down {
     &__header,
     &__body {
@@ -279,8 +417,8 @@ body{
         height: 0;
     }
 }
-.arrow-down {
-}
+// .arrow-down {
+// }
 .comparsion-body{
     margin-bottom: 30px;
     margin-top: -50px;

@@ -109,7 +109,7 @@ function removeProduct(event){
     localStorage.setItem('comparsionData', localStorage.comparsionData.replace(JSON.stringify(chooseProductData), ''))
     console.log(localStorage.comparsionData)
 
-    location. reload()
+    location.reload()
 }
 
 for(let btn of removeBtns) {
