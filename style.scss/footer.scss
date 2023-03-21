@@ -12,6 +12,18 @@ footer .wrapper {
         justify-content: center;
     }
     @include lg-m-d{
+        // flex-direction: column;
+        // align-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, 223px);
+        grid-column: repeat(2, 150px);
+        width: 62%;
+        grid-gap: 25px;
+    }
+    @include sm-d {
+        display: flex;
+    // justify-content: space-between;
+    // align-items: flex-start;
         flex-direction: column;
         align-items: center;
     }
@@ -42,8 +54,8 @@ footer .wrapper {
         }
     }
     &__list:last-child{
-        @include lg-m-d{
-            margin-left: -100px;
+        @include sm-d {
+            margin-left: -50px;
         }
     }
     &__list-ttl{
