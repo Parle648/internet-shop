@@ -388,6 +388,16 @@ body{
     display: flex;
     justify-content: space-between;
     margin-top: 78px;
+    @include md-d {
+        flex-direction: column;
+        justify-content: start;
+    }
+    .product-wrapper{
+        @include md-d {
+            flex-wrap: nowrap;
+            justify-content: start;
+        }
+    }
 }
 // .comparsion-settings {
 // }
@@ -403,7 +413,7 @@ body{
         border: 1px solid #E5E5E5;
         border-radius: 5px;
     }
-
+    
     &__ttl,
     &__choise {
         color: #070C11;
@@ -422,12 +432,18 @@ body{
 .comparsion-body{
     margin-bottom: 30px;
     margin-top: -50px;
+    @include md-d {
+        overflow-y: auto;
+    }
 }
 .comparsion-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 25.5px 0px 25.5px 20px;
+    @include md-d {
+        min-width: 760px;
+    }
 }
 .row {
     &__ttl {
