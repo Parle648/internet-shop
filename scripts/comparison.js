@@ -31,7 +31,7 @@ comparsionData.forEach(product => {
 
 //
 
-const url = 'http://localhost:8000/productSpecifications'
+const url = 'https://test-api-second-try.onrender.com/productSpecifications'
 const comparsionBlock = document.querySelector('.comparsion-body')
 
 async function getData(){

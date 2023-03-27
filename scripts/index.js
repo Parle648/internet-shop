@@ -23,7 +23,7 @@ function openRegistrForm(event){
 
 const makeRegistr = document.querySelector('#make-registr');
 const registrForm = document.querySelector('#enter-form');
-let localUrl = 'http://localhost:8000/users';
+let localUrl = 'https://test-api-second-try.onrender.com/users';
 
 // validation
 
