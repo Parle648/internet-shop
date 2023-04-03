@@ -118,6 +118,54 @@ header {
   color: #838688;
 }
 
+.buy-page-btn,
+.prefer-link {
+  position: relative;
+}
+
+.buy-counter {
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background-color: #2A5275;
+  right: -50%;
+  top: -50%;
+  font-size: 11px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+.prefer-counter {
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  background-color: red;
+  border-radius: 50%;
+  font-size: 11px;
+  color: #fff;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  right: -50%;
+  top: -50%;
+}
+
 .mobile-nav {
   display: none;
   -webkit-box-pack: justify;

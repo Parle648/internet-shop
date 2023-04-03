@@ -50,6 +50,36 @@
       "id": 7
     }
   ],
+  "productCarts": [
+    {
+      "id": "one-prod",
+      "type": "Сигвей",
+      "ttl": "Гироскутер Smart Balance Well 6.5 Хип-Хоп (АКВАЗАЩИТА)",
+      "trueLineCost": "45000",
+      "realCost": "42990"
+    },
+    {
+      "id": "two-prod",
+      "type": "Сигвей",
+      "ttl": "Гироскутер Smart Balance Well 6.5 Хип-Хоп (АКВАЗАЩИТА)",
+      "trueLineCost": "45000",
+      "realCost": "4290"
+    },
+    {
+      "id": "three-prod",
+      "type": "Сигвей",
+      "ttl": "Гироскутер Smart Balance Well 6.5 Хип-Хоп (АКВАЗАЩИТА)",
+      "trueLineCost": "45000",
+      "realCost": "2990"
+    },
+    {
+      "id": "four-prod",
+      "type": "Сигвей",
+      "ttl": "Гироскутер Smart Balance Well 6.5 Хип-Хоп (АКВАЗАЩИТА)",
+      "trueLineCost": "45000",
+      "realCost": "420"
+    }
+  ],
   "productSpecifications": [
     {
       "id": "one-prod",

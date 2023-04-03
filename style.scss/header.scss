@@ -59,6 +59,7 @@ header{
             display: none;
         }
     }
+
     &__user-img{
         width: 20px;
     }
@@ -85,4 +86,37 @@ header{
         letter-spacing: 0em;
         color: #838688;
     }
+}
+.buy-page-btn,
+.prefer-link {
+    position: relative;
+}
+.buy-counter{
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background-color: #2A5275;
+    right: -50%;
+    top: -50%;
+    font-size: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.prefer-counter{
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    background-color: red;
+    border-radius: 50%;
+    font-size: 11px;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -50%;
+    top: -50%;
 }
