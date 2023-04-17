@@ -466,3 +466,11 @@ body{
 .input_valid{
     border-color: green;
 }
+//@at-rootprod__delete
+.prod__delete {
+    color: #821a1a;
+    position: absolute;
+    right: 0%;
+    font-size: 18px;
+    @include hover;
+}

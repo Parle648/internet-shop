@@ -1548,3 +1548,13 @@ body {
 .input_valid {
   border-color: green;
 }
+
+.prod__delete {
+  color: #821a1a;
+  position: absolute;
+  right: 0%;
+  font-size: 18px;
+}
+.prod__delete:hover {
+  cursor: pointer;
+}

@@ -197,19 +197,6 @@ renderCarts.then(data => {
     }
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // registration / enter
 const form = document.querySelector('.form-wrapper');
 const enterBtn = document.querySelector('.header__enter');

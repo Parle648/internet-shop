@@ -4,7 +4,8 @@ const comparsionData = localStorage.comparsionData.split(';').splice(1)
 comparsionData.forEach(product => {
     if(product != '') {
         prodBlock.innerHTML += `
-        <div class="product-cart" id="${JSON.parse(product).id}">
+        <div class="product-cart" id="${JSON.parse(product).id}" style="position: relative">
+            <a class="prod__delete">Удалить из списка</a>
             <img src="${JSON.parse(product).img}" alt="" class="prod__img">
             <h2 class="prod__class">Сигвеи</h2>
             <h2 class="prod__name">${JSON.parse(product).ttl}</h2>
@@ -104,12 +105,12 @@ function removeProduct(event){
         cost: event.target.closest('.product-cart').querySelector('.prod__real-cost').innerText.split(' ')[0],
         ttl: event.target.closest('.product-cart').querySelector('.prod__name').innerText,
     }
+    console.log(chooseProductData)
     
     localStorage.setItem('pressedComparsion', localStorage.pressedComparsion.replace(`${event.target.closest('.product-cart').id}`, ''))
     localStorage.setItem('comparsionData', localStorage.comparsionData.replace(JSON.stringify(chooseProductData), ''))
-    console.log(localStorage.comparsionData)
 
-    location.reload()
+    // location.reload()
 }
 
 for(let btn of removeBtns) {
