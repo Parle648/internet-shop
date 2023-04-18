@@ -32,8 +32,10 @@
         @include simpleText;
         width: 169px;
     }
-    &__slider-img {
+    &__slider-item {
         margin-top: 20px;
+        width: 800px;
+        overflow: hidden;
         @include xl-d{
             width: 95%;
         }

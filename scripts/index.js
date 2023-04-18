@@ -309,3 +309,36 @@ enterForm.addEventListener('submit', function(event){
 
     getUsersData();
 })
+
+const slider = document.querySelector('.slider');
+const sliderImages = document.querySelector('.slider-images');
+const sliderImagesCount = document.querySelectorAll('.slider-images img').length;
+let currentIndex = 0;
+let interval;
+
+function startSlider() {
+  interval = setInterval(() => {
+    currentIndex++;
+    if (currentIndex > sliderImagesCount - 1) {
+      currentIndex = 0;
+    }
+    sliderImages.style.transform = `translateX(-${currentIndex * 800}px)`;
+  }, 3500);
+}
+
+function stopSlider() {
+  clearInterval(interval);
+}
+
+slider.addEventListener('mouseenter', stopSlider);
+slider.addEventListener('mouseleave', startSlider);
+
+startSlider();
+
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'ru',
+      includedLanguages: 'es,ua,ru', // языки, на которые будет доступен перевод
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE, // стиль переводчика
+    }, document.querySelectorAll('.nav__link'));
+  }
