@@ -338,7 +338,7 @@ startSlider();
 function googleTranslateElementInit() {
     new google.translate.TranslateElement({
       pageLanguage: 'ru',
-      includedLanguages: 'es,ua,ru', // языки, на которые будет доступен перевод
+      includedLanguages: 'uk', // языки, на которые будет доступен перевод
       layout: google.translate.TranslateElement.InlineLayout.SIMPLE, // стиль переводчика
-    }, document.querySelectorAll('.nav__link'));
+    }, 'google_translate_element');
   }
