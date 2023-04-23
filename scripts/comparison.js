@@ -91,6 +91,40 @@ async function getData(){
         let rows = document.querySelectorAll('.comparsion-row');
         
         rows[0].innerHTML = ''
+
+        for (let i = 0; i <= 6; i++) {
+            if(i % 2) {
+                rows[i].classList.add('lightt-blue')
+            } else {
+                rows[i].classList.add('white')
+            }
+        }
+
+        for(let j = 1; j < rows.length; j++) {
+            for(let i = 1; i < 4; i++) {
+                console.log(rows[j].children[i], rows[j].children[1])
+                if (rows[j].children[i].innerText != rows[j].children[1].innerText) {
+                    rows[j].classList.add('lightorange')
+                }
+            }
+        }
+
+        const renderDifference = document.querySelector('.light__input')
+
+        renderDifference.onclick = () => {
+            if(renderDifference.checked) {
+                rows.forEach((item) => {
+                    if(!item.closest('.lightorange')){
+                        item.style.display="none"
+                    }
+                })
+            } else {
+                rows.forEach((item) => {
+                    item.style.display="flex"
+                })
+            }
+        }
+
     })
 }
 

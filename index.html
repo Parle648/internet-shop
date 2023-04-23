@@ -11,6 +11,36 @@
     <title>Smart техника</title>
 </head>
 <body>
+    <div class="catalog-mob">
+        <h2 class="catalog-ttl">Ещё<img src="img/x.svg" alt=""style="
+            margin-left: 200px;
+        "></h2>
+        <div class="user-apy">
+            <a href="prefer.html" class="prefer-link"><div class="prefer-counter">0</div><img src="img/Vector-2.svg" alt="" class="header__user-img"></a>
+            <a href="comparison.html"><img src="img/Vector-1.svg" alt="" class="header__user-img"></a>
+            <a href="buy-page.html" class="buy-page-btn"><div class="buy-counter">0</div><img src="img/Vector.svg" alt="" class="header__user-img" id="prod-btn"></a>
+        </div>
+        <ul class="nav__list">
+            <li class="nav__item">
+                <a href="about-company.html" class="nav__link">О компании</a>
+            </li>
+            <li class="nav__item">
+                <a href="actions.html" class="nav__link">Акции</a>
+            </li>
+            <li class="nav__item">
+                <a href="#!" class="nav__link" id="rassrochka">Рассрочка 0|0|18</a>
+            </li>
+            <li class="nav__item">
+                <a href="#!" class="nav__link">Сервис и гарантия</a>
+            </li>
+            <li class="nav__item">
+                <a href="#!" class="nav__link">Опт/дропшиппинг</a>
+            </li>
+            <li class="nav__item">
+                <a href="#!" class="nav__link">Контакты</a>
+            </li>
+        </ul>
+    </div>
     <ul class="mobile-nav">
         <li class="mobile-nav__item">
             <a href="index.html" class="mobile-nav__link">
@@ -25,7 +55,7 @@
             </a>
         </li>
         <li class="mobile-nav__item">
-            <a href="catalog.html" class="mobile-nav__link">
+            <a href="catalog.html" class="mobile-nav__link mobile-catalog">
                 <img src="img/shop-cart.svg" alt="@!" class="mobile-nav__icon">
                 Каталог
             </a>
@@ -77,24 +107,26 @@
             <a href="" class="registr-link">Зарегистрироваться</a>
         </form>
     </div>
-    <header>
-        <img src="img/logo.svg" alt="" class="header__logo">
-        <div class="header__contacts">
-            <h2 class="header__number">+7 (812) 660-50-54</h2>
-            <h2 class="header__number">+7 (958) 111-95-03</h2>
-            <h2 class="header__shedule">Пн-вс: с 10:00 до 21:00</h2>
-        </div>
-        <div class="header__search">
-            <img src="img/search-icon.svg" alt="" class="search__img"><input type="text" class="search__input" placeholder="Поиск">
-        </div>
-        <div class="header__user-api">
-            <img src="img/Vector-3.svg" alt="" class="header__user-img">
-            <a href="prefer.html" class="prefer-link"><div class="prefer-counter">0</div><img src="img/Vector-2.svg" alt="" class="header__user-img"></a>
-            <a href="comparison.html"><img src="img/Vector-1.svg" alt="" class="header__user-img"></a>
-            <a href="buy-page.html" class="buy-page-btn"><div class="buy-counter">0</div><img src="img/Vector.svg" alt="" class="header__user-img" id="prod-btn"></a>
-        </div>
-        <button class="header__enter">Войти</button>
-    </header>
+    <div class="wrapper">
+        <header>
+            <img src="img/logo.svg" alt="" class="header__logo">
+            <div class="header__contacts">
+                <h2 class="header__number">+7 (812) 660-50-54</h2>
+                <h2 class="header__number">+7 (958) 111-95-03</h2>
+                <h2 class="header__shedule">Пн-вс: с 10:00 до 21:00</h2>
+            </div>
+            <div class="header__search">
+                <img src="img/search-icon.svg" alt="" class="search__img"><input type="text" class="search__input" placeholder="Поиск">
+            </div>
+            <div class="header__user-api">
+                <img src="img/Vector-3.svg" alt="" class="header__user-img">
+                <a href="prefer.html" class="prefer-link"><div class="prefer-counter">0</div><img src="img/Vector-2.svg" alt="" class="header__user-img"></a>
+                <a href="comparison.html"><img src="img/Vector-1.svg" alt="" class="header__user-img"></a>
+                <a href="buy-page.html" class="buy-page-btn"><div class="buy-counter">0</div><img src="img/Vector.svg" alt="" class="header__user-img" id="prod-btn"></a>
+            </div>
+            <button class="header__enter">Войти</button>
+        </header>
+    </div>
     <nav class="main-nav">
         <div class="wrapper">
             <div class="catalog">
@@ -103,13 +135,13 @@
             </div>
             <ul class="nav__list">
                 <li class="nav__item">
-                    <a href="#!" class="nav__link">О компании</a>
+                    <a href="about-company.html" class="nav__link">О компании</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#!" class="nav__link">Акции</a>
+                    <a href="actions.html" class="nav__link">Акции</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#!" class="nav__link">Рассрочка 0|0|18</a>
+                    <a href="#!" class="nav__link" id="rassrochka">Рассрочка 0|0|18</a>
                 </li>
                 <li class="nav__item">
                     <a href="#!" class="nav__link">Сервис и гарантия</a>
@@ -175,15 +207,8 @@
                 <div class="slider">
                     <div class="slider-images">
                         <img class="slider-img" src="img/slider.png">
-                        <img class="slider-img" src="img/slider-photo2.jpg">
-                        <img class="slider-img" src="img/slider-photo3.jpg">
-                        <img class="slider-img" src="img/slider.png">
-                        <img class="slider-img" src="img/slider-photo3.jpg">
                     </div>
                 </div>
-                <!-- <div class="description__slider-item">
-                    <img src="img/slider.png" alt="" class="description__slider-img">
-                </div> -->
             </div>
         </div>
 

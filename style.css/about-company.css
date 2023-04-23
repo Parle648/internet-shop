@@ -1,0 +1,14 @@
+.main-ttl,
+.upgrade-ttl,
+.biggest-choise-ttl {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 47px;
+  margin-bottom: 30px;
+}
+
+.upgrade-ttl,
+.biggest-choise-ttl {
+  font-size: 24px;
+  margin-bottom: 20px;
+}

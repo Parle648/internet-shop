@@ -1,0 +1,137 @@
+.main-ttl {
+    margin-top: 30px;
+}
+.main-ttl,
+.upgrade-ttl,
+.biggest-choise-ttl {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 47px;
+    margin-bottom:30px;    
+}
+.upgrade-ttl,
+.biggest-choise-ttl {
+    font-size: 24px;
+    margin-bottom: 20px;
+    @include md-d {
+        font-size: 18px;
+        line-height: 21.6px;
+    }
+}
+.main-ttl-after,
+.biggest-choise-ttl-after,
+.upgrade-ttl-after {
+    width: 925px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #070C11;
+    margin-bottom: 40px;
+    @include lg-d {
+        width: 90%;
+    }
+}
+.everytime-bigchoise {
+    background-color: #EDF2F6;
+    height: 225px;
+    padding: 40px 0px 40px;
+    @include md-d {
+        height: auto;
+    }
+}
+.choise-block {
+    display: grid;
+    grid-template-columns: 225px 225px 552px;
+    margin-bottom: 40px;
+    @include lg-d {
+        grid-template-columns: 1fr 1fr;
+    };
+    @include md-d {
+        grid-template-columns: 1fr;
+    }
+}
+.choise-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.choise-img {
+    margin-right: 12px;
+}
+.choise-item-ttl {
+    font-size: 20px;
+    font-weight: 400;
+}
+.nuber-link {
+    color: #4878A6;
+    text-decoration: none;
+}
+// actions
+.action-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @include xl-d {
+        grid-template-columns: 1fr;
+    }
+}
+.action-item {
+    width: 640px;
+    height: 180px;
+    background-color: #EDF2F6;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    @include xl-d {
+        width: 90%;
+    }
+    &:hover{
+        background: #B0CFD0;
+        cursor: pointer;
+    }
+}
+.action-item-ttl {
+    width: 330px;
+    @include md-d {
+        width: 172px;
+        font-size: 16px;
+    }
+}
+.action-img {
+    @include md-d {
+        width: 81px;
+    }
+}
+.lightt-blue{
+    background-color: #EDF2F6;
+}
+.white{
+    background-color: #fff;
+}
+.lightorange{
+    background-color: #FFF7E3;
+}
+.choose-filter-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 800px;
+    flex-wrap: wrap;
+    margin-bottom: -87px;
+}
+.choose-filter{
+    border-radius: 102px;
+    background-color: #EDF2F6;
+    color: #070C11;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 4px 8px 6px 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    &:hover{
+        background-color: #4878A6;
+        cursor: pointer;
+    }
+}

@@ -63,15 +63,43 @@
         align-items: center;
         list-style: none;
         margin-left: 24px;
+        @include md-d {
+            flex-direction: column;
+            align-items: baseline;
+        }
     }
     
     &__item {
         margin-right: 40px;
+        @include md-d {
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #C8CACB;
+            width: 147%;
+
+        }
     }
     
     &__link {
         color: #fff;
         text-decoration: none;
         @include simpleText;
+        @include md-d {
+            color: #070C11;
+            margin-bottom: 30px;
+        }
     }
+}
+.catalog-mob{
+    background-color: #EDF2F6;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+.user-apy{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0px 15px;
 }

@@ -37,7 +37,7 @@ renderCarts.then(data => {
 
     const prodBtn = document.querySelector('#prod-btn');
     const cartsBuyBtns = document.querySelectorAll('.prod__add-in');
-    const buyCounter = document.querySelector('.buy-counter');
+    const buyCounter = document.querySelectorAll('.buy-counter');
 
     if(localStorage.pressedKeys != undefined){
         localStorage.pressedKeys.split(',').splice(1).forEach((item) => {
@@ -49,13 +49,16 @@ renderCarts.then(data => {
             document.querySelector(id).querySelector('.prod__add-in').setAttribute('src', 'img/buy-done.svg')
         })
     }
-    console.log(document.querySelectorAll('.busket_active').length)
-    if(document.querySelectorAll('.busket_active').length == 0) {
-        buyCounter.classList.add('display')
-        console.log(4)
-    } else {
-        buyCounter.classList.remove('display')
-        buyCounter.innerText = document.querySelectorAll('.busket_active').length
+    if(document.querySelectorAll('.busket_active').length === 0) {
+        buyCounter.forEach((i) => {
+            i.classList.add('display')
+        })
+        console.log('worked')
+    } else if (document.querySelectorAll('.busket_active').length > 0) {
+        buyCounter.forEach((i) => {
+            i.classList.remove('display')
+            i.innerText = document.querySelectorAll('.busket_active').length
+        })
     }
     
     function addToProd(event){
@@ -79,12 +82,15 @@ renderCarts.then(data => {
             localStorage.setItem("product", JSON.stringify(prodData))
         }
 
-        if(document.querySelectorAll('.busket_active').length === 0) {
-            buyCounter.classList.add('display')
-            console.timeLog(43)
+        if(document.querySelectorAll('.busket_active').length == 0) {
+            buyCounter.forEach((i) => {
+                i.classList.add('display')
+            })
         } else {
-            buyCounter.classList.remove('display')
-            buyCounter.innerText = document.querySelectorAll('.busket_active').length
+            buyCounter.forEach((i) => {
+                i.classList.remove('display')
+                i.innerText = document.querySelectorAll('.busket_active').length
+            })
         }
 
         event.currentTarget.removeEventListener('click', addToProd)
@@ -95,10 +101,25 @@ renderCarts.then(data => {
     })
     buyCounter.innerText = document.querySelectorAll('.busket_active').length
 
+    // footer logic
+
+    const header = document.querySelector('header')
+
+    document.addEventListener('scroll', () => {
+        if( scrollY >= 600 ) {
+            header.style.position = "fixed"
+        } else {
+            header.style.position = "relative"
+            header.style.margin = "0 auto"
+        }
+    })
+
+
+
     // prefer logic
 
     const preferBtn = document.querySelectorAll('.prefer-btn');
-    const preferCount = document.querySelector('.prefer-counter');
+    const preferCount = document.querySelectorAll('.prefer-counter');
 
     if(localStorage.pressedPrefer != undefined){
         localStorage.pressedPrefer.split(',').splice(1).forEach((item) => {
@@ -114,10 +135,14 @@ renderCarts.then(data => {
     }
     const preferBtns = document.querySelectorAll('.prefer-active')
     if(preferBtns.length !== 0) {
-        preferCount.innerText = preferBtns.length;
-        preferCount.classList.remove('display')
+        preferCount.forEach((i) => {
+            i.innerText = preferBtns.length;
+            i.classList.remove('display')
+        })
     } else {
-        preferCount.classList.add('display')
+        preferCount.forEach((i) => {
+            i.preferCount.classList.add('display')
+        })
     }
     
     function addToPrefer(event){
@@ -141,8 +166,10 @@ renderCarts.then(data => {
             localStorage.setItem("preferData", JSON.stringify(chooseProductData))
         }
         const preferBtns = document.querySelectorAll('.prefer-active')
-        preferCount.innerText = preferBtns.length;
-        preferCount.classList.remove('display')
+        preferCount.forEach((i) => {
+            i.innerText = preferBtns.length;
+            i.classList.remove('display')
+        })
         event.currentTarget.removeEventListener('click', addToProd)
     }
 
@@ -195,6 +222,11 @@ renderCarts.then(data => {
             }
         })
     }
+
+    if(buyCounter.innerText > 0) {
+        buyCounter.classList.remove('display')
+    }
+
 })
 
 // registration / enter
@@ -316,24 +348,24 @@ const sliderImagesCount = document.querySelectorAll('.slider-images img').length
 let currentIndex = 0;
 let interval;
 
-function startSlider() {
-  interval = setInterval(() => {
-    currentIndex++;
-    if (currentIndex > sliderImagesCount - 1) {
-      currentIndex = 0;
-    }
-    sliderImages.style.transform = `translateX(-${currentIndex * 800}px)`;
-  }, 3500);
-}
+// function startSlider() {
+//   interval = setInterval(() => {
+//     currentIndex++;
+//     if (currentIndex > sliderImagesCount - 1) {
+//       currentIndex = 0;
+//     }
+//     sliderImages.style.transform = `translateX(-${currentIndex * 800}px)`;
+//   }, 3500);
+// }
 
-function stopSlider() {
-  clearInterval(interval);
-}
+// function stopSlider() {
+//   clearInterval(interval);
+// }
 
-slider.addEventListener('mouseenter', stopSlider);
-slider.addEventListener('mouseleave', startSlider);
+// slider.addEventListener('mouseenter', stopSlider);
+// slider.addEventListener('mouseleave', startSlider);
 
-startSlider();
+// startSlider();
 
 function googleTranslateElementInit() {
     new google.translate.TranslateElement({
@@ -342,3 +374,14 @@ function googleTranslateElementInit() {
       layout: google.translate.TranslateElement.InlineLayout.SIMPLE, // стиль переводчика
     }, 'google_translate_element');
   }
+
+document.querySelector('#rassrochka').onclick = (event) => {
+    event.preventDefault();
+    alert('На сьогоднішній день дана послуга не є актуальною');
+} 
+const catalogBtn = document.querySelector('.mobile-catalog')
+
+catalogBtn.onclick = (event) => {
+    event.preventDefault()
+    console.log(event.currentTarget)
+}

@@ -8,7 +8,7 @@ renderCarts.then(data => {
     let appendcontain = ``
     data.forEach((cart) => {
         appendcontain += `
-        <div class="product-cart" id="${cart.id}">
+        <div class="product-cart" id="${cart.id}" data-charactec="${cart.attribute}">
             <img src="img/prod-img.jpg" alt="" class="prod__img">
             <h2 class="prod__class">${cart.type}</h2>
             <h2 class="prod__name">${cart.ttl}</h2>
@@ -88,7 +88,7 @@ function toggleNextElem(event){
 
 const applyBtn = document.querySelector('.apply')
 const filterInputs = document.querySelectorAll('.light__input')
-
+let deleteFilters;
 
 applyBtn.addEventListener('click', applyFilters)
 
@@ -103,8 +103,9 @@ function applyFilters(){
         [...carts.children].forEach((cart) => {
             cart.classList.remove('cart_unvisible')
         });
-    }else {
+    } else {
         [...carts.children].forEach((cart) => {
+            cart.classList.remove('cart_visible')
             cart.classList.add('cart_unvisible')
         });
     }
@@ -115,4 +116,125 @@ function applyFilters(){
             }
         })
     })
+
+    document.querySelector('.choose-filter-wrapper').innerHTML = ``
+
+    filterInputs.forEach((input) => {
+        if ( input.checked ) {
+            const filterText = input.parentNode.lastElementChild.innerText;
+            const filterType = input.closest('.cost-select').firstElementChild.firstElementChild.innerText
+
+            const appendFilter = `
+                <span class="choose-filter" data-id="${input.id}">${filterType}: ${filterText} <img src="img/x.svg" alt="" class="x"></span>
+            `;
+
+            document.querySelector('.choose-filter-wrapper').innerHTML += appendFilter;
+        }
+    })
+
+    deleteFilters = document.querySelectorAll('.x');
+    console.log(deleteFilters);
+    deleteFilters.forEach((i) => {
+        i.addEventListener('click', () => {
+            const id = i.parentNode.getAttribute('data-id')
+            const inputs = document.querySelectorAll('.light__input');
+            inputs.forEach((input) => {
+                if (input.id === id) {
+                    input.checked = false;
+
+                    applyFilters()
+                }
+            })
+        });
+    })
 }
+
+
+const sliderTarget = document.querySelector('.one');
+const sliderTargetTwo = document.querySelector('.two')
+const middle = document.querySelector('.cost__choise')
+
+sliderTarget.onmousedown = function(event){
+
+    sliderTarget.style.position = 'absolute';
+
+    sliderTarget.parentNode.style.position = 'relative';
+
+    sliderPosition(event.pageX, event.pageY);
+
+    function sliderPosition(x){
+        // console.log(x)
+        // console.log( (x - document.querySelector('.wrapper').offsetLeft / 2 ))
+        sliderTarget.style.left = (x - document.querySelector('.wrapper').offsetLeft) - 12 + 'px'
+        document.querySelector('.one-unvisible').style.width = (x - document.querySelector('.wrapper').offsetLeft) - 12 + 'px'
+        // increace.value =  Math.round((sliderTarget.style.left.slice(0, sliderTarget.style.left.length -2) / 300) * 250000)
+        // if(increace.value <= 500){
+        //     increace.value = 500
+        // }
+    };
+    
+    function MouseMove(event){
+        
+        sliderPosition(event.pageX, event.pageY);
+
+        if(sliderTarget.style.left.slice(0, sliderTarget.style.left.length -2) > 275){
+            sliderTarget.style.left ='275px';
+        } else if(sliderTarget.style.left.slice(0, sliderTarget.style.left.length -2) <= 0){
+            sliderTarget.style.left ='0px'
+        }
+
+    };
+
+    document.addEventListener('mousemove', MouseMove)
+
+    document.onmouseup = function(){
+
+        document.removeEventListener('mousemove', MouseMove);
+
+        sliderTarget.removeEventListener('mousemove', MouseMove);
+    }
+};
+
+sliderTargetTwo.onmousedown = function(event){
+
+    sliderTargetTwo.style.position = 'absolute';
+
+    sliderTargetTwo.parentNode.style.position = 'relative';
+
+    sliderPosition(event.pageX, event.pageY);
+
+    function sliderPosition(x){
+        sliderTargetTwo.style.left = (x - document.querySelector('.wrapper').offsetLeft) + 5 + 'px'
+        document.querySelector('.two-unvisible').style.width = (290 - (x - document.querySelector('.wrapper').offsetLeft) - 25) + 'px'
+        // hight.value =  Math.round((sliderTargetTwo.style.left.slice(0, sliderTarget.style.left.length -2) / 300) * 250000)
+        // if(hight.value >= 250000){
+        //     hight.value = 250000
+        // }
+        // else if(hight.value <= 500){
+        //     hight.value = 500
+        // }
+    };
+
+    function MouseMove(event){
+
+        sliderPosition(event.pageX, event.pageY);
+
+        if(sliderTargetTwo.style.left.slice(0, sliderTargetTwo.style.left.length -2) > 275){
+
+            sliderTargetTwo.style.left ='275px';
+        } else if(sliderTargetTwo.style.left.slice(0, sliderTargetTwo.style.left.length -2) <= 0){
+
+            sliderTargetTwo.style.left ='0px'
+        }
+
+    };
+
+    document.addEventListener('mousemove', MouseMove)
+
+    document.onmouseup = function(){
+
+        document.removeEventListener('mousemove', MouseMove);
+
+        sliderTargetTwo.removeEventListener('mousemove', MouseMove);
+    }
+};

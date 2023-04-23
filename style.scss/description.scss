@@ -41,3 +41,8 @@
         }
     }
 }
+.slider-img{
+    @include xl-d{
+        width: 95%;
+    }
+}

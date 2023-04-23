@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700&display=swap');
+    </style>
+    <title>Smart техника</title>
+</head>
+<body>
+    <ul class="mobile-nav">
+        <li class="mobile-nav__item">
+            <a href="index.html" class="mobile-nav__link">
+                <img src="img/home.svg" alt="@!" class="mobile-nav__icon">
+                Главная
+            </a>
+        </li>
+        <li class="mobile-nav__item">
+            <a href="buy-page.html" class="mobile-nav__link">
+                <img src="img/menu-icon.svg" alt="@!" class="mobile-nav__icon">
+                Корзина
+            </a>
+        </li>
+        <li class="mobile-nav__item">
+            <a href="catalog.html" class="mobile-nav__link">
+                <img src="img/shop-cart.svg" alt="@!" class="mobile-nav__icon">
+                Каталог
+            </a>
+        </li>
+        <li class="mobile-nav__item">
+            <a href="" class="mobile-nav__link">
+                <img src="img/white-search-icon.svg" alt="@!" class="mobile-nav__icon">
+                Поиск
+            </a>
+        </li>
+        <li class="mobile-nav__item">
+            <a href="" class="mobile-nav__link">
+                <img src="img/more.svg" alt="@!" class="mobile-nav__icon">
+                Ещё
+            </a>
+        </li>
+    </ul>
+    <div class="form-wrapper display">
+        <form action="post" class="registration-form display" id="enter-form">
+            <h2 class="registr__ttl">Регистрация<img src="img/close-form.svg" alt="" class="form__close-img"></h2>
+            <h2 class="registr__input-ttl">Имя</h2>
+            <input class="registr__input" type="text" name="name" data-regexp="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$">
+            <h2 class="registr__input-ttl">Эл. почта</h2>
+            <input class="registr__input" type="mail" name="mail" data-regexp="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$">
+            <h2 class="registr__input-ttl">Номер телефона</h2>
+            <input class="registr__input" type="number" name="number" data-regexp="^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$">
+            <h2 class="registr__input-ttl">Придумайте пароль</h2>
+            <input class="registr__input" type="password" name="pass" data-regexp="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
+            <p class="user-apply">
+                Регистрируясь, вы соглашаетесь с<a class="user-apply__link"> пользовательским соглашением</a>
+            </p>
+            <button class="user__btn form__btn" id="make-registr">Зарегистрироваться</button>
+            <a href="" class="already-registr">Я уже зарегистрирован</a>
+        </form>
+
+        <form action="get" class="registration-form" id="registr-form">
+            <h2 class="registr__ttl">Войти<img src="img/close-form.svg" alt="" class="form__close-img"></h2>
+            <h2 class="registr__input-ttl">Эл. почта или телефон</h2>
+            <input class="registr__input" type="mail" name="mail">
+            <h2 class="registr__input-ttl">Пароль</h2>
+            <input class="registr__input" type="password" name="pass">
+            <a href="#!" class="forgot-pass">Забыли пароль?</a>
+            <label class="remember-me">
+                <input type="checkbox" class="remember__input">
+                <div class="fake-checkbox"><img src="img/check-mark.svg" alt=""></div>
+                <span class="">Запомнить меня</span>
+            </label>
+            <button class="user__btn form__btn" id="enter-btn">Войти</button>
+            <a href="" class="registr-link">Зарегистрироваться</a>
+        </form>
+    </div>
+    <div class="wrapper">
+        <header>
+            <a href="index.html"><img src="img/logo.svg" alt="" class="header__logo"></a>
+            <div class="header__contacts">
+                <h2 class="header__number">+7 (812) 660-50-54</h2>
+                <h2 class="header__number">+7 (958) 111-95-03</h2>
+                <h2 class="header__shedule">Пн-вс: с 10:00 до 21:00</h2>
+            </div>
+            <div class="header__search">
+                <img src="img/search-icon.svg" alt="" class="search__img"><input type="text" class="search__input" placeholder="Поиск">
+            </div>
+            <div class="header__user-api">
+                <img src="img/Vector-3.svg" alt="" class="header__user-img">
+                <a href="prefer.html" class="prefer-link"><div class="prefer-counter">0</div><img src="img/Vector-2.svg" alt="" class="header__user-img"></a>
+                <a href="comparison.html"><img src="img/Vector-1.svg" alt="" class="header__user-img"></a>
+                <a href="buy-page.html" class="buy-page-btn"><div class="buy-counter">0</div><img src="img/Vector.svg" alt="" class="header__user-img" id="prod-btn"></a>
+            </div>
+            <button class="header__enter">Войти</button>
+        </header>
+    </div>
+    <nav class="main-nav">
+        <div class="wrapper">
+            <div class="catalog">
+                <img src="img/menu-icon.svg" alt="" class="catalog__img">
+                <a href="catalog.html" class="catalog__text">Каталог товаров</a>
+            </div>
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#!" class="nav__link">О компании</a>
+                </li>
+                <li class="nav__item">
+                    <a href="actions.html" class="nav__link">Акции</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#!" class="nav__link">Рассрочка 0|0|18</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#!" class="nav__link">Сервис и гарантия</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#!" class="nav__link">Опт/дропшиппинг</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#!" class="nav__link">Контакты</a>
+                </li>
+                <div id="google_translate_element"></div>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        
+        <main>
+            <h2 class="main-ttl">О нас</h2>
+            <p class="main-ttl-after">
+                Официальный представитель производителей эксклюзивного электротранспорта и Смарт-Техники, Созданная в 2015
+                 году компания Смарт-Техника стала одним из первых дистрибьютеров персонального электротранспорта в России
+                и уже более трёх лет является официальным представителем таких производителей эксклюзивного электронного 
+                транспорта, как Yamato, SmartONE, HALTEN и Kugoo
+            </p>
+            <h2 class="upgrade-ttl">Постоянно растущая и развивающаяся Компания</h2>
+            <p class="upgrade-ttl-after">
+                На сегодняшней день Компания Смарт-Техника обладает собственным розничным магазинами в г. Санкт-Петербурге, официальными представительствами в различных районах г. СПб и Ленобласти, сетью складов в Петербурге, Москве и других крупных городах России. Мы постоянно растём и развиваемся. Доставка наших товаров осуществляется во все регионы Страны!
+            </p>
+            <h2 class="biggest-choise-ttl">Самый большой выбор персонального электротранспорта</h2>
+            <p class="biggest-choise-ttl-after">
+                Самый большой выбор персонального электротранспорта представлен в выставочных залах Смарт-Техника по адресам: <br>
+                <b>ул. Ленсовета 81;</b> <br>
+                <b>ул. Дыбенко 23к1;</b> <br>
+                <b>пр. Энгельса 113 к 2.</b> <br>
+                Расширение ассортимента происходит стабильно раз в полгода, и вы всегда найдёте у нас самые эксклюзивные модели электронного транспорта нового поколения!
+            </p>
+        </main>
+    </div>
+    <div class="everytime-bigchoise">
+        <div class="wrapper">
+            <h2 class="biggest-choise-ttl">Всегда в наличии большой выбор:</h2>
+            <div class="choise-block">
+                <div class="choise-item">
+                    <img src="img/icons for menu1.svg" alt="" class="choise-img">
+                    <h2 class="choise-item-ttl">гироскутеров</h2>
+                </div>
+                <div class="choise-item">
+                    <img src="img/icons for menu1.svg" alt="" class="choise-img">
+                    <h2 class="choise-item-ttl">гироскутеров</h2>
+                </div>
+                <div class="choise-item">
+                    <img src="img/icons for menu1.svg" alt="" class="choise-img">
+                    <h2 class="choise-item-ttl" id="biggest-item">электросамокатов, стандартных и полноприводных</h2>
+                </div>
+                <div class="choise-item">
+                    <img src="img/icons for menu1.svg" alt="" class="choise-img">
+                    <h2 class="choise-item-ttl">гироскутеров</h2>
+                </div>
+                <div class="choise-item">
+                    <img src="img/icons for menu1.svg" alt="" class="choise-img">
+                    <h2 class="choise-item-ttl">гироскутеров</h2>
+                </div>
+                <div class="choise-item">
+                    <img src="img/icons for menu1.svg" alt="" class="choise-img">
+                    <h2 class="choise-item-ttl">гироскутеров</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <h2 class="upgrade-ttl">Опытный и высококвалифицированный персонал</h2>
+        <p class="upgrade-ttl-after">
+            В компании работают опытные высококвалифицированные сотрудники, всегда готовые помочь вам с выбором персонального транспортного средства, ответить на все возможные вопросы и научить кататься на выбранной вами модели
+        </p>
+        <h2 class="upgrade-ttl">Возможность тест драйва</h2>
+        <p class="upgrade-ttl-after">
+            Для тест-драйва крупной техники необходима предварительная запись. Её можно осуществить по телефону: <a href="" class="nuber-link">+7 (812) 509-23-43 </a>или <b>через консультанта в магазине.</b>
+        </p>
+        <h2 class="upgrade-ttl">Цель и миссия компании Смарт-Техника.рф</h2>
+        <p class="upgrade-ttl-after">
+            <b>Цель компании Смарт Техника</b> — в 2020 году стать самым крупным магазином по продаже персонального электротранспорта в Санкт-Петербурге. А также открывать свои филиалы во всех крупных городах России, что происходит уже сейчас.
+        </p>
+        <p class="upgrade-ttl-after">
+            <b>Миссия компании Смарт Техника</b> — познакомить россиян с экологически чистыми видами транспорта и улучшить экологию Страны! Мы надеемся не просто привить нашей нации любовь к ЭКО-транспорту, а создать в стране новую культуру передвижения.        </p>
+    </div>
+
+    <footer>
+        <div class="wrapper">
+            <div class="">
+                <img src="img/logo.svg" alt="" class="footer__logo">
+                <div class="footer__contacts">
+                    <h2 class="header__number footer__number">+7 (812) 660-50-54</h2>
+                    <h2 class="header__number footer__number">+7 (958) 111-95-03</h2>
+                    <h2 class="header__shedule footer__shedule">Пн-вс: с 10:00 до 21:00</h2>
+                </div>
+                <div class="footer__location">
+                    Проспект Стачек 67 к.5
+                </div class="footer__location">
+                <div class="footer__location">
+                    Лиговский проспект 205
+                </div class="footer__location">
+                <div class="footer__location">
+                    Гражданский проспект, 116 к.5
+                </div class="footer__location">
+            </div>
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a href="#!" class="footer__list-ttl">Для клиента</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#!" class="footer__link">Как купить</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#!" class="footer__link">Доставка и оплата</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#!" class="footer__link">Кредит</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#!" class="footer__link">Политика конфиденциальности</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#!" class="footer__link">Вопросы и ответы (F.A.Q.)</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#!" class="footer__link">Сервис и гарантия</a>
+                </li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a href="#!" class="footer__list-ttl">Для клиента</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#!" class="footer__link">Как купить</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#!" class="footer__link">Доставка и оплата</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#!" class="footer__link">Кредит</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#!" class="footer__link">Политика конфиденциальности</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#!" class="footer__link">Вопросы и ответы (F.A.Q.)</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#!" class="footer__link">Сервис и гарантия</a>
+                </li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a href="#!" class="footer__list-ttl">Для клиента</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#!" class="footer__link">Как купить</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#!" class="footer__link">Доставка и оплата</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="scripts/index.js"></script>
+</body>
+</html>
