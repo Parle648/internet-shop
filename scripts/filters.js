@@ -238,3 +238,36 @@ sliderTargetTwo.onmousedown = function(event){
         sliderTargetTwo.removeEventListener('mousemove', MouseMove);
     }
 };
+
+const mobileBtns = document.querySelectorAll('.mobile-nav__item');
+const mobileElements = document.querySelectorAll('.mobile-element');
+const closeBtn = document.querySelectorAll('.close-catalog')
+
+mobileBtns.forEach((btn) => {
+    btn.addEventListener('click', (event) => {
+        let identification = event.currentTarget.id;
+        mobileElements.forEach((element) => {
+            if ( element.id === identification) {
+                element.classList.remove('mobile-element')
+                document.body.style.overflow = 'hidden'
+            } else {
+                element.classList.add('mobile-element')
+            }
+        })
+    })
+})
+
+closeBtn.forEach((btn) => {
+    btn.addEventListener('click', (event) => {
+        const parent = event.target.parentNode.parentNode;
+        parent.classList.add('mobile-element')
+        document.body.style.overflow = 'auto'
+    })
+})
+
+const openFiltersBtn = document.querySelector('.choose-filter__btn');
+const filterMobileBlock = document.querySelector('.sort-block')
+
+openFiltersBtn.addEventListener('click', (event) => {
+    console.log(filterMobileBlock)
+})

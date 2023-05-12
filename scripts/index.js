@@ -349,88 +349,10 @@ enterForm.addEventListener('submit', function(event){
     getUsersData();
 })
 
-const slider = document.querySelector('.slider');
-const sliderImages = document.querySelector('.slider-images');
-const sliderImagesCount = document.querySelectorAll('.slider-images img').length;
-let currentIndex = 0;
-let interval;
-
-// function startSlider() {
-//   interval = setInterval(() => {
-//     currentIndex++;
-//     if (currentIndex > sliderImagesCount - 1) {
-//       currentIndex = 0;
-//     }
-//     sliderImages.style.transform = `translateX(-${currentIndex * 800}px)`;
-//   }, 3500);
-// }
-
-// function stopSlider() {
-//   clearInterval(interval);
-// }
-
-// slider.addEventListener('mouseenter', stopSlider);
-// slider.addEventListener('mouseleave', startSlider);
-
-// startSlider();
-
-function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'ru',
-      includedLanguages: 'uk', // языки, на которые будет доступен перевод
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE, // стиль переводчика
-    }, 'google_translate_element');
-  }
-
 document.querySelector('#rassrochka').onclick = (event) => {
     event.preventDefault();
     alert('На сьогоднішній день дана послуга не є актуальною');
 } 
-// const catalogBtn = document.querySelector('.mobile-catalog')
-
-// catalogBtn.onclick = (event) => {
-//     event.preventDefault()
-//     const popup = document.querySelector('.catalog-mob')
-//     const closeCatalog = document.querySelector('.close-catalog');
-//     popup.style.opacity = '1'
-//     window.scrollTo(0,0); 
-//     document.body.style.overflow = "hidden"
-    
-//     closeCatalog.onclick = (event) => {
-//         const parentBlock = event.currentTarget.closest('.catalog-mob')
-        
-//         popup.style.opacity = '0'
-        
-//         document.body.style.overflow = "auto"
-//     }
-// }
-
-// const searchMob = document.querySelector('.search-mob-open')
-
-// searchMob.onclick = (event) => {
-//     event.preventDefault()
-//     const popup = document.querySelector('.search-mob')
-//     const closeCatalog = document.querySelector('.close-search');
-//     popup.style.opacity = '1'
-//     window.scrollTo(0,0); 
-//     document.body.style.overflow = "hidden"
-
-//     console.log(closeCatalog)
-    
-//     closeCatalog.onclick = (event) => {
-//         console.log(7)
-//         const parentBlock = event.currentTarget.closest('.search-mob')
-        
-//         popup.style.opacity = '0'
-//         popup.style.height = 'auto'
-        
-//         document.body.style.overflow = "auto"
-//     }
-// }
-
-// document.querySelector('.header__enter').onclick = (event) => {
-//     event.preventDefault()
-// }
 
 const mobileBtns = document.querySelectorAll('.mobile-nav__item');
 const mobileElements = document.querySelectorAll('.mobile-element');

@@ -801,11 +801,65 @@ footer .wrapper {
       -ms-flex-align: baseline;
           align-items: baseline;
 }
+@media (max-width: 1089.8px) {
+  .filters-wrapper {
+    margin: 0 auto;
+  }
+}
 
 .filters-wrapper .product-wrapper {
   width: 995px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+@media (max-width: 1089.8px) {
+  .filters-wrapper .product-wrapper {
+    width: 95%;
+  }
+}
+
+@media (max-width: 1089.8px) {
+  .pr-wr {
+    width: 100%;
+  }
+}
+
+.choose-filter__btn {
+  padding: 14px 32px;
+  background-color: #4878A6;
+  display: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0px;
+  border-radius: 10px;
+}
+.choose-filter__btn:hover {
+  cursor: pointer;
+  background-color: rgba(72, 121, 166, 0.7568627451);
+}
+@media (max-width: 1089.8px) {
+  .choose-filter__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.filter-btn__img {
+  margin-right: 11px;
+  display: inline;
+}
+
+.filter-btn__text {
+  color: #fff;
+  font-family: "Exo 2";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
 }
 
 .cost-select__header {
@@ -1008,6 +1062,30 @@ footer .wrapper {
       -ms-flex-align: baseline;
           align-items: baseline;
 }
+@media (max-width: 1089.8px) {
+  .filter-select {
+    width: 95%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+@media (max-width: 799.8px) {
+  .filter-select {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 113px;
+  }
+}
+
+.choose-filter-wrapper {
+  width: auto;
+}
 
 .filter__header {
   display: -webkit-box;
@@ -1050,6 +1128,22 @@ footer .wrapper {
 
 .cart_visible {
   display: block;
+}
+
+@media (max-width: 1089.8px) {
+  .filters-wrapper {
+    width: 95%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 1089.8px) {
+  .sort-block {
+    display: none;
+  }
 }
 
 .cabinet-inner-ttl {

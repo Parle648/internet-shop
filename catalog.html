@@ -11,36 +11,68 @@
     <title>Smart техника</title>
 </head>
 <body>
-    <ul class="mobile-nav">
+     <!--! search -->
+     <div class="mobile-search mobile-element" id="search">
+        <h2 class="catalog-ttl">Поиск<img class="close-catalog" src="img/x.svg" alt="" style="margin: 5px 0px 0px 50px;"></h2>
+        <input type="text" class="search-mob-input" placeholder="Введите запрос">
+    </div>
+     <!--! catalog -->
+    <div class="mobile-catalog-popup mobile-element" id="catalog">
+        <h2 class="catalog-ttl">Ещё<img class="close-catalog" src="img/x.svg" alt=""style="
+            margin-left: 200px;
+        "></h2>
+        <div class="user-apy" style="margin: 0px 0px 15px 24px;">
+            <a href="prefer.html" class="prefer-link"><div class="prefer-counter">0</div><img src="img/Vector-2.svg" alt="" class="header__user-img"></a>
+            <a href="comparison.html"><img src="img/Vector-1.svg" alt="" class="header__user-img"></a>
+            <a href="buy-page.html" class="buy-page-btn"><div class="buy-counter">0</div><img src="img/Vector.svg" alt="" class="header__user-img" id="prod-btn"></a>
+        </div>
+        <ul class="nav__list">
+            <li class="nav__item">
+                <a href="about-company.html" class="nav__link">О компании</a>
+            </li>
+            <li class="nav__item">
+                <a href="actions.html" class="nav__link">Акции</a>
+            </li>
+            <li class="nav__item">
+                <a href="#!" class="nav__link" id="rassrochka">Рассрочка 0|0|18</a>
+            </li>
+            <li class="nav__item">
+                <a href="#!" class="nav__link">Сервис и гарантия</a>
+            </li>
+            <li class="nav__item">
+                <a href="#!" class="nav__link">Опт/дропшиппинг</a>
+            </li>
+            <li class="nav__item">
+                <a href="#!" class="nav__link">Контакты</a>
+            </li>
+        </ul>
+    </div>
+    <ul class="mobile-nav" style="z-index: 200;">
         <li class="mobile-nav__item">
-            <a href="" class="mobile-nav__link">
+            <a href="index.html" class="mobile-nav__link">
                 <img src="img/home.svg" alt="@!" class="mobile-nav__icon">
                 Главная
             </a>
         </li>
         <li class="mobile-nav__item">
-            <a href="" class="mobile-nav__link">
-                <img src="img/menu-icon.svg" alt="@!" class="mobile-nav__icon">
+            <a href="buy-page.html" class="mobile-nav__link">
+                <img src="img/shop-cart.svg" alt="@!" class="mobile-nav__icon">
                 Корзина
             </a>
         </li>
         <li class="mobile-nav__item">
-            <a href="" class="mobile-nav__link">
-                <img src="img/shop-cart.svg" alt="@!" class="mobile-nav__icon">
+            <a href="catalog.html" class="mobile-nav__link">
+                <img src="img/menu-icon.svg" alt="@!" class="mobile-nav__icon">
                 Каталог
             </a>
         </li>
-        <li class="mobile-nav__item">
-            <a href="" class="mobile-nav__link">
+        <li class="mobile-nav__item search-mob-open mobile-nav__link" id="search">
                 <img src="img/white-search-icon.svg" alt="@!" class="mobile-nav__icon">
                 Поиск
-            </a>
         </li>
-        <li class="mobile-nav__item">
-            <a href="" class="mobile-nav__link">
+        <li class="mobile-nav__item mobile-nav__link" id="catalog">
                 <img src="img/more.svg" alt="@!" class="mobile-nav__icon">
                 Ещё
-            </a>
         </li>
     </ul>
     <header>
@@ -180,9 +212,11 @@
                     </div>
                 </div>
             </div>
-            <div class="">
+            <div class="pr-wr">
                 <div class="filter-select">
-                    <div class="choose-filter-wrapper"></div>
+                    <div class="choose-filter-wrapper" style="width: 250px;">
+                        <button class="choose-filter__btn"><img class="filter-btn__img" src="img/stroke.svg" alt=""><span class="filter-btn__text">Фильтры</span></button>
+                    </div>
                     <div class="">
                         <div class="filter__header">
                             <span class="filter__header-ttl" id="biggest">Сначала дорогие</span><img src="img/arrow-right.svg" alt="" class="select__arrow select__arrow_active">
