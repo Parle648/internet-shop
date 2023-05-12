@@ -141,7 +141,7 @@ renderCarts.then(data => {
         })
     } else {
         preferCount.forEach((i) => {
-            i.preferCount.classList.add('display')
+            i.classList.add('display')
         })
     }
     
@@ -182,10 +182,14 @@ renderCarts.then(data => {
     const comprsBtn = document.querySelectorAll('.comparsion-btn');
 
     if(document.querySelectorAll('.comparsion_active').length === 0) {
-        buyCounter.classList.add('display')
+        buyCounter.forEach((i) => {
+            i.classList.add('display')
+        })
     } else {
-        buyCounter.classList.remove('display')
-        buyCounter.innerText = document.querySelectorAll('.busket_active').length
+        buyCounter.forEach((i) => {
+            i.classList.remove('display')
+            i.innerText = document.querySelectorAll('.busket_active').length
+        })
     }
 
     function addToComparsion(event){
@@ -224,10 +228,13 @@ renderCarts.then(data => {
     }
 
     if(buyCounter.innerText > 0) {
-        buyCounter.classList.remove('display')
+        buyCounter.forEach((i) => {
+            i.classList.remove('display')
+        })
     }
 
 })
+
 
 // registration / enter
 const form = document.querySelector('.form-wrapper');
@@ -379,9 +386,74 @@ document.querySelector('#rassrochka').onclick = (event) => {
     event.preventDefault();
     alert('На сьогоднішній день дана послуга не є актуальною');
 } 
-const catalogBtn = document.querySelector('.mobile-catalog')
+// const catalogBtn = document.querySelector('.mobile-catalog')
 
-catalogBtn.onclick = (event) => {
-    event.preventDefault()
-    console.log(event.currentTarget)
-}
+// catalogBtn.onclick = (event) => {
+//     event.preventDefault()
+//     const popup = document.querySelector('.catalog-mob')
+//     const closeCatalog = document.querySelector('.close-catalog');
+//     popup.style.opacity = '1'
+//     window.scrollTo(0,0); 
+//     document.body.style.overflow = "hidden"
+    
+//     closeCatalog.onclick = (event) => {
+//         const parentBlock = event.currentTarget.closest('.catalog-mob')
+        
+//         popup.style.opacity = '0'
+        
+//         document.body.style.overflow = "auto"
+//     }
+// }
+
+// const searchMob = document.querySelector('.search-mob-open')
+
+// searchMob.onclick = (event) => {
+//     event.preventDefault()
+//     const popup = document.querySelector('.search-mob')
+//     const closeCatalog = document.querySelector('.close-search');
+//     popup.style.opacity = '1'
+//     window.scrollTo(0,0); 
+//     document.body.style.overflow = "hidden"
+
+//     console.log(closeCatalog)
+    
+//     closeCatalog.onclick = (event) => {
+//         console.log(7)
+//         const parentBlock = event.currentTarget.closest('.search-mob')
+        
+//         popup.style.opacity = '0'
+//         popup.style.height = 'auto'
+        
+//         document.body.style.overflow = "auto"
+//     }
+// }
+
+// document.querySelector('.header__enter').onclick = (event) => {
+//     event.preventDefault()
+// }
+
+const mobileBtns = document.querySelectorAll('.mobile-nav__item');
+const mobileElements = document.querySelectorAll('.mobile-element');
+const closeBtn = document.querySelectorAll('.close-catalog')
+
+mobileBtns.forEach((btn) => {
+    btn.addEventListener('click', (event) => {
+        let identification = event.currentTarget.id;
+        mobileElements.forEach((element) => {
+            if ( element.id === identification) {
+                element.classList.remove('mobile-element')
+                document.body.style.overflow = 'hidden'
+            } else {
+                element.classList.add('mobile-element')
+            }
+        })
+    })
+})
+
+closeBtn.forEach((btn) => {
+    btn.addEventListener('click', (event) => {
+        const parent = event.target.parentNode.parentNode;
+        parent.classList.add('mobile-element')
+        document.body.style.overflow = 'auto'
+    })
+})

@@ -7,7 +7,7 @@ header{
     padding: 10px 0;
     position: relative;
     background-color: #fff;
-    z-index: 2;
+    z-index: 70;
     @include xl-d{
         width: 94%;
     }
@@ -68,14 +68,16 @@ header{
     }
     &__enter {
         @include simpleText;
-        @include hover;
         color: #fff;
         border: 0px;
         background-color: #2A5275;
         padding: 16px 26px;
         border-radius: 4px;
+        opacity: 0;
+
     }
 }
+.catalog-mob
 .search {
     &__img {
         margin-right: 15px;
@@ -151,4 +153,44 @@ header{
 .VIpgJd-ZVi9od-ORHb{
     display: none;
 }
-  
+.remove-popup{
+
+}
+.mobile-search {
+    position: absolute;
+    z-index: 150;
+    background: aliceblue;
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h2 {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+.mobile-catalog-popup {
+    position: absolute;
+    z-index: 150;
+    width: 100%;
+    background-color: aliceblue;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.mobile-element {
+    display: none;
+}
+.mobile_active {
+    display: block;
+}
+.mobile-nav {
+    z-index: 200;
+}
+.catalog-ttl {
+    margin-left: 24px;
+    margin-bottom: 15px;
+}

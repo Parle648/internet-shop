@@ -11,11 +11,17 @@
     <title>Smart техника</title>
 </head>
 <body>
-    <div class="catalog-mob">
-        <h2 class="catalog-ttl">Ещё<img src="img/x.svg" alt=""style="
+    <!--! search -->
+    <div class="mobile-search mobile-element" id="search">
+        <h2 class="catalog-ttl">Поиск<img class="close-catalog" src="img/x.svg" alt="" style="margin: 5px 0px 0px 50px;"></h2>
+        <input type="text" class="search-mob-input" placeholder="Введите запрос">
+    </div>
+     <!--! catalog -->
+    <div class="mobile-catalog-popup mobile-element" id="catalog">
+        <h2 class="catalog-ttl">Ещё<img class="close-catalog" src="img/x.svg" alt=""style="
             margin-left: 200px;
         "></h2>
-        <div class="user-apy">
+        <div class="user-apy" style="margin: 0px 0px 15px 24px;">
             <a href="prefer.html" class="prefer-link"><div class="prefer-counter">0</div><img src="img/Vector-2.svg" alt="" class="header__user-img"></a>
             <a href="comparison.html"><img src="img/Vector-1.svg" alt="" class="header__user-img"></a>
             <a href="buy-page.html" class="buy-page-btn"><div class="buy-counter">0</div><img src="img/Vector.svg" alt="" class="header__user-img" id="prod-btn"></a>
@@ -41,7 +47,7 @@
             </li>
         </ul>
     </div>
-    <ul class="mobile-nav">
+    <ul class="mobile-nav" style="z-index: 200;">
         <li class="mobile-nav__item">
             <a href="index.html" class="mobile-nav__link">
                 <img src="img/home.svg" alt="@!" class="mobile-nav__icon">
@@ -50,27 +56,23 @@
         </li>
         <li class="mobile-nav__item">
             <a href="buy-page.html" class="mobile-nav__link">
-                <img src="img/menu-icon.svg" alt="@!" class="mobile-nav__icon">
+                <img src="img/shop-cart.svg" alt="@!" class="mobile-nav__icon">
                 Корзина
             </a>
         </li>
         <li class="mobile-nav__item">
-            <a href="catalog.html" class="mobile-nav__link mobile-catalog">
-                <img src="img/shop-cart.svg" alt="@!" class="mobile-nav__icon">
+            <a href="catalog.html" class="mobile-nav__link">
+                <img src="img/menu-icon.svg" alt="@!" class="mobile-nav__icon">
                 Каталог
             </a>
         </li>
-        <li class="mobile-nav__item">
-            <a href="" class="mobile-nav__link">
+        <li class="mobile-nav__item search-mob-open mobile-nav__link" id="search">
                 <img src="img/white-search-icon.svg" alt="@!" class="mobile-nav__icon">
                 Поиск
-            </a>
         </li>
-        <li class="mobile-nav__item">
-            <a href="" class="mobile-nav__link">
+        <li class="mobile-nav__item mobile-nav__link" id="catalog">
                 <img src="img/more.svg" alt="@!" class="mobile-nav__icon">
                 Ещё
-            </a>
         </li>
     </ul>
     <div class="form-wrapper display">
@@ -119,7 +121,6 @@
                 <img src="img/search-icon.svg" alt="" class="search__img"><input type="text" class="search__input" placeholder="Поиск">
             </div>
             <div class="header__user-api">
-                <img src="img/Vector-3.svg" alt="" class="header__user-img">
                 <a href="prefer.html" class="prefer-link"><div class="prefer-counter">0</div><img src="img/Vector-2.svg" alt="" class="header__user-img"></a>
                 <a href="comparison.html"><img src="img/Vector-1.svg" alt="" class="header__user-img"></a>
                 <a href="buy-page.html" class="buy-page-btn"><div class="buy-counter">0</div><img src="img/Vector.svg" alt="" class="header__user-img" id="prod-btn"></a>
@@ -152,7 +153,7 @@
                 <li class="nav__item">
                     <a href="#!" class="nav__link">Контакты</a>
                 </li>
-                <div id="google_translate_element"></div>
+                <!-- <div id="google_translate_element"></div> -->
             </ul>
         </div>
     </nav>
@@ -167,14 +168,6 @@
                     </li>
                     <li class="description__item">
                         <img src="img/icons for menu1.svg" alt="" class="description__svg">
-                        <span class="description__product-ttl">Сигвеи и мини-сигвеи</span>
-                    </li>
-                    <li class="description__item">
-                        <img src="img/icons for menu2.svg" alt="" class="description__svg">
-                        <span class="description__product-ttl">Сигвеи и мини-сигвеи</span>
-                    </li>
-                    <li class="description__item">
-                        <img src="img/icons for menu2.svg" alt="" class="description__svg">
                         <span class="description__product-ttl">Сигвеи и мини-сигвеи</span>
                     </li>
                     <li class="description__item">
