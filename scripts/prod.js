@@ -116,3 +116,13 @@ function removeProduct(event){
 deleteProdBtn.forEach((btn) => {
     btn.addEventListener('click', removeProduct)
 })
+
+const nextStepBtn = document.querySelectorAll('.show-next');
+const nextStep = document.querySelector('.get-way__content');
+
+nextStepBtn.forEach((btn) => {
+    btn.addEventListener('click', (event) => {
+        const nextElement = event.target.nextElementSibling.lastElementChild;
+        nextElement.style.display = 'block'
+    })
+})
