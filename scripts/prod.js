@@ -117,12 +117,38 @@ deleteProdBtn.forEach((btn) => {
     btn.addEventListener('click', removeProduct)
 })
 
+//
+
 const nextStepBtn = document.querySelectorAll('.show-next');
 const nextStep = document.querySelector('.get-way__content');
 
 nextStepBtn.forEach((btn) => {
     btn.addEventListener('click', (event) => {
+        // show next btn
+        event.target.classList.add('display')
+        let eventNextIndex = Array.from(nextStepBtn).indexOf(event.target) + 1;
+        // nextStepBtn[eventNextIndex].classList.remove('display');
+        if ( eventNextIndex !== 3 ) {
+            nextStepBtn[eventNextIndex].classList.remove('display');
+        }
+
+        // show next block
         const nextElement = event.target.nextElementSibling.lastElementChild;
-        nextElement.style.display = 'block'
+        nextElement.style.display = 'block';
+        nextElement.previousElementSibling.style.margin = '0px 0px 44px 0px'
+        if ( eventNextIndex === 3 ) {
+            nextElement.style.display = 'grid';
+            document.querySelector('.make').style.background = '#4878A6'
+        }
+
+        // block interact with previous block
+        if ( eventNextIndex - 1 === 0 ) {
+            document.querySelectorAll('.buy__product').forEach((block) => {
+                block.classList.add('buy-block_active')
+            })
+        } else if ( eventNextIndex - 1 === 1 ) {
+            console.log(nextStepBtn[eventNextIndex - 1].previousElementSibling.lastElementChild.firstElementChild.firstElementChild.firstElementChild.firstElementChild.firstElementChild.nextElementSibling.innerText)
+            console.log(nextStepBtn[eventNextIndex - 1].previousElementSibling.lastElementChild.firstElementChild.lastElementChild)
+        }
     })
 })

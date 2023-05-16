@@ -476,3 +476,9 @@ body{
     font-size: 18px;
     @include hover;
 }
+.buy-block_active {
+    width: 110px;
+    overflow: hidden;
+    display: inline-flex;
+    border-bottom: 0px;
+}

@@ -8,7 +8,7 @@ renderCarts.then(data => {
     let appendcontain = ``
     data.forEach((cart) => {
         appendcontain += `
-        <div class="product-cart" id="${cart.id}" data-charactec="${cart.attribute}">
+        <div class="product-cart" id="${cart.id}" data-charactec="${cart.attribute}" style="width: 258px">
             <img src="img/prod-img.jpg" alt="" class="prod__img">
             <h2 class="prod__class">${cart.type}</h2>
             <h2 class="prod__name">${cart.ttl}</h2>
@@ -25,7 +25,7 @@ renderCarts.then(data => {
             </div>
             </span>
             <span class="prod__btns-block">
-            <button class="prod__order">Купить в 1 клик</button>
+            <button class="prod__order" style="font-size: 12px;">Купить в 1 клик</button>
             <img src="img/shop-cart.svg" alt="" class="prod__add-in">
             </span>
         </div>
@@ -128,7 +128,7 @@ function applyFilters(){
                 <span class="choose-filter" data-id="${input.id}">${filterType}: ${filterText} <img src="img/x.svg" alt="" class="x"></span>
             `;
 
-            document.querySelector('.choose-filter-wrapper').innerHTML += appendFilter;
+            document.querySelector('.choose-filter-wrapper').innerHTML = appendFilter;
         }
     })
 
@@ -238,6 +238,7 @@ sliderTargetTwo.onmousedown = function(event){
         sliderTargetTwo.removeEventListener('mousemove', MouseMove);
     }
 };
+'.choose-filter-wrapper'
 
 const mobileBtns = document.querySelectorAll('.mobile-nav__item');
 const mobileElements = document.querySelectorAll('.mobile-element');
@@ -268,6 +269,15 @@ closeBtn.forEach((btn) => {
 const openFiltersBtn = document.querySelector('.choose-filter__btn');
 const filterMobileBlock = document.querySelector('.sort-block')
 
-openFiltersBtn.addEventListener('click', (event) => {
-    console.log(filterMobileBlock)
-})
+openFiltersBtn.onclick = () => {
+    document.querySelector('.sort-block').style.display = 'block'
+    document.querySelectorAll('.cost-select__header').forEach((item) => {
+        item.style.width = '233px'
+    })
+    document.body.style.overflow = 'hidden'
+    document.querySelector('.apply').addEventListener('click', () => {
+        document.body.style.overflow = 'auto'
+        document.querySelector('.sort-block').style.display = 'none'
+        document.querySelector('.choose-filter-wrapper').style
+    })
+}
