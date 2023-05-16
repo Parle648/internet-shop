@@ -137,18 +137,8 @@ nextStepBtn.forEach((btn) => {
         nextElement.style.display = 'block';
         nextElement.previousElementSibling.style.margin = '0px 0px 44px 0px'
         if ( eventNextIndex === 3 ) {
-            nextElement.style.display = 'grid';
+            nextElement.style.display = 'flex';
             document.querySelector('.make').style.background = '#4878A6'
-        }
-
-        // block interact with previous block
-        if ( eventNextIndex - 1 === 0 ) {
-            document.querySelectorAll('.buy__product').forEach((block) => {
-                block.classList.add('buy-block_active')
-            })
-        } else if ( eventNextIndex - 1 === 1 ) {
-            console.log(nextStepBtn[eventNextIndex - 1].previousElementSibling.lastElementChild.firstElementChild.firstElementChild.firstElementChild.firstElementChild.firstElementChild.nextElementSibling.innerText)
-            console.log(nextStepBtn[eventNextIndex - 1].previousElementSibling.lastElementChild.firstElementChild.lastElementChild)
         }
     })
 })

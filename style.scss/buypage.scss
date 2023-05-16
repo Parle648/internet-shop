@@ -20,6 +20,12 @@
     border-radius: 4px;
     padding: 30px;
     margin-bottom: 40px;
+    @include md-d {
+        width: 86%;
+    }
+    @include sm-d {
+        width: 80%;
+    }
     // .get-way__ttl
 
     &__ttl {
@@ -43,6 +49,12 @@
         border-bottom: 1px solid #C8CACB;
         padding-bottom: 10px;
         margin-bottom: 54px;
+        @include md-d {
+            margin: 0 auto;
+            height: 229px;
+            flex-direction: column;
+            width: 100%;
+        }
     }
 }
 .get-way__ttl_active {
@@ -88,6 +100,9 @@
     &:hover {
         cursor: pointer;
     }
+    @include sm-d {
+        width: 190px;
+    }
 }
 .apartment-location,
 .buyer-location {
@@ -104,6 +119,9 @@
     margin-bottom: 20px;
     &:hover {
         cursor: pointer;
+    }
+    @include sm-d {
+        width: 231px;
     }
 }
 .delivery-fake-checkbox::before {
@@ -151,6 +169,11 @@
     width: 800px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    @include md-d {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
 }
 .delivery-input {
     display: none;
@@ -160,6 +183,12 @@
     height: 48px;
     border: 1px solid #C8CACB;
     border-radius: 4px;
+    @include md-d {
+        width: 300px;
+    }
+    @include sm-d {
+        width: 231px;
+    }
 }
 .reccomendation-to-delivery {
     grid-column-start: 1;
@@ -168,6 +197,17 @@
 .grid-form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+#last-form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include md-d {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
 }
 .select__inputs {
     @include md-d {
@@ -181,4 +221,7 @@
 }
 .choose-filter__btn {
     margin-bottom: 25px;
+}
+.finish-amount {
+    margin-bottom: 40px;
 }

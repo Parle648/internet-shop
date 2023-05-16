@@ -16,6 +16,7 @@
 }
 body{
     font-family: "Exo 2";
+    overflow-x: hidden;
 }
 
 // forms style
@@ -482,3 +483,7 @@ body{
     display: inline-flex;
     border-bottom: 0px;
 }
+.filter__body {
+    top: 52px;
+    position: absolute;
+} 
