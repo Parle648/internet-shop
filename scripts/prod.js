@@ -142,3 +142,47 @@ nextStepBtn.forEach((btn) => {
         }
     })
 })
+
+const sendDeliveryData = document.querySelector('#make');
+const inputs = document.querySelectorAll('.delivery-text-input');
+
+function checkInput(input) {
+    if (input.dataset.regexp) {
+        const regexp = new RegExp(input.dataset.regexp);
+        console.log(regexp)
+
+        input.oninput = () => {
+            if (regexp.test(input.value)) {
+                console.log(true)
+                input.classList.add('input_valid')
+            } else {
+                console.log(false)
+                input.classList.remove('input_valid')
+            }
+        }
+    }
+}
+
+inputs.forEach(checkInput)
+let alreadySend = false;
+
+sendDeliveryData.addEventListener('click', () => {
+    let isEmpty = true;
+    inputs.forEach((input) => {
+        if (input.value === '') {
+            alert(`введите данные в поле ${input.previousElementSibling.innerText}`);
+            input.classList.add('invalid')
+            if(input.placeholder === '') {
+                input.placeholder = 'НЕОБХОДИМО ЗАПОЛНИТЬ ДАННОЕ ПОЛЕ'
+            }
+            isEmpty = false
+        }
+    })
+    if (alreadySend) {
+        alert(`ваш заказ уже оформлен`)
+    }
+    else if (isEmpty) {
+        alert(`ваш заказ оформлен`)
+        alreadySend = true;
+    }
+})

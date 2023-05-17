@@ -82,7 +82,7 @@
                         <span class="finish__info">бесплатно</span>
                     </div>
                     <span class="finish__result-ttl">К оплате<span class="finish__result"><span class="finaly-price">22 580</span> ₽</span></span>
-                    <button class="make">Оформить заказ</button>
+                    <button class="make" id="make">Оформить заказ</button>
                 </div>
             </div>
             <button class="show-next">Далее</button>
@@ -148,12 +148,12 @@
                         </div>
 
                         <div class="apartment-location">
-                            <span class="apartment-location-ttl">Доставка</span>
+                            <span class="apartment-location-ttl">Квартира</span>
                             <input class="delivery-text-input" type="text" name="apartment-location" id="">
                         </div>
                         
                         <div class="reccomendation-to-delivery">
-                            <span class="apartment-location-ttl">Квартира</span>
+                            <span class="apartment-location-ttl">Комментарий курьеру</span>
                             <input class="delivery-text-input" type="text" name="reccomendation-to-delivery" id="">
                         </div>
 
@@ -182,19 +182,19 @@
                 <form class="get-way__content grid-form" id="last-form" style="display: none;">
                     <div class="apartment-location">
                         <span class="apartment-location-ttl">Имя</span>
-                        <input class="delivery-text-input" type="text" name="user-name" id="" placeholder="Например, Иван" style="padding-left: 20px;width: 230px;">
+                        <input class="delivery-text-input" type="text" name="user-name" id="" data-regexp="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" placeholder="Например, Ivan" style="padding-left: 20px;width: 230px;">
                     </div>
                     <div class="apartment-location">
                         <span class="apartment-location-ttl">Фамилия</span>
-                        <input class="delivery-text-input" type="text" name="user-surname" id="" placeholder="Например, Иванов" style="padding-left: 20px;width: 230px;">
+                        <input class="delivery-text-input" type="text" name="user-surname" id="" data-regexp="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" placeholder="Например, Ivanov" style="padding-left: 20px;width: 230px;">
                     </div>
                     <div class="apartment-location">
                         <span class="apartment-location-ttl">Номер телефона</span>
-                        <input class="delivery-text-input" type="text" name="user-number" id="" placeholder="+7 (9__) ___-__-__" style="padding-left: 20px;width: 230px;">
+                        <input class="delivery-text-input" type="text" name="user-number" id="" data-regexp="^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$" placeholder="88005553535" style="padding-left: 20px;width: 230px;">
                     </div>
                     <div class="apartment-location">
                         <span class="apartment-location-ttl">Эл. почта</span>
-                        <input class="delivery-text-input" type="text" name="user-email" id="" placeholder="Например,  smart@gmail.com" style="padding-left: 20px;width: 230px;">
+                        <input class="delivery-text-input" type="text" name="user-email" id="" data-regexp="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" placeholder="Например,  smart@gmail.com" style="padding-left: 20px;width: 230px;">
                     </div>
                 </form>
             </div>

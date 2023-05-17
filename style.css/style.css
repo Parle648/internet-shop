@@ -1886,6 +1886,10 @@ footer .wrapper {
   margin-bottom: 40px;
 }
 
+.invalid {
+  border-color: orangered;
+}
+
 * {
   margin: 0;
   padding: 0;
