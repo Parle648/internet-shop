@@ -41,6 +41,15 @@ async function getData(){
         return res.text()
     })
     .then(res => {
+
+        // console.log(document.querySelector('.product-wrapper').innerHTML === ' ')
+
+        if ( document.querySelector('.product-wrapper').innerHTML === ' ' ) {
+            document.querySelector('.footer').classList.add('active_footer')
+        } else {
+            document.querySelector('.footer').classList.remove('active_footer')
+        }
+
         const prodCpecific = JSON.parse(res);
         let choose = []
         let keys = []
@@ -102,7 +111,6 @@ async function getData(){
 
         for(let j = 1; j < rows.length; j++) {
             for(let i = 1; i < 4; i++) {
-                console.log(rows[j].children[i], rows[j].children[1])
                 if (rows[j].children[i].innerText != rows[j].children[1].innerText) {
                     rows[j].classList.add('lightorange')
                 }
@@ -149,3 +157,11 @@ function removeProduct(event){
 for(let btn of removeBtns) {
     btn.addEventListener('click', removeProduct)
 }
+
+// console.log(document.querySelector('.product-wrapper').innerHTML)
+
+// if ( document.querySelector('.product-wrapper').innerHTML = '' ) {
+//     document.querySelector('.footer').classList.add('active_footer')
+// } else {
+//     document.querySelector('.footer').classList.remove('active_footer')
+// }

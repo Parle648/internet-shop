@@ -149,14 +149,11 @@ const inputs = document.querySelectorAll('.delivery-text-input');
 function checkInput(input) {
     if (input.dataset.regexp) {
         const regexp = new RegExp(input.dataset.regexp);
-        console.log(regexp)
 
         input.oninput = () => {
             if (regexp.test(input.value)) {
-                console.log(true)
                 input.classList.add('input_valid')
             } else {
-                console.log(false)
                 input.classList.remove('input_valid')
             }
         }

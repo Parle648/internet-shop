@@ -50,7 +50,14 @@ function removeCart(btn){
         localStorage.setItem('preferData', localStorage.preferData.replace(JSON.stringify(chooseProductData), ''))
 
         preferBlock.removeChild(parentBlock)
+        location.reload();
     })
 }
 
 preferBtns.forEach(removeCart)
+
+if (document.querySelector('.product-wrapper').innerHTML === '') {
+    document.querySelector('.footer').classList.add('active_footer')
+} else {
+    document.querySelector('.footer').classList.remove('active_footer')
+}
