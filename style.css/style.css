@@ -1896,6 +1896,10 @@ footer .wrapper {
   width: 100%;
 }
 
+.filter__header {
+  margin-bottom: 60px;
+}
+
 * {
   margin: 0;
   padding: 0;
